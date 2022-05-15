@@ -1,0 +1,31 @@
+context:
+  name: andreyorst-fzf.kak
+  version: 1.1.0
+  github: https://github.com/andreyorst/fzf.kak
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+build:
+  number: 1
+  noarch: generic
+
+requirements:
+  run:
+    - fzf
+    - kakoune
+
+source:
+  url: '{{ github }}/archive/refs/tags/v{{ version }}.tar.gz'
+  sha256: bd46df335b686e003d2c2fcbdcf2f644713591ef499582a5948cd642b59330ea
+
+about:
+  home: '{{ github }}'
+  summary: 'fzf integration for kak'
+  license: MIT
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot

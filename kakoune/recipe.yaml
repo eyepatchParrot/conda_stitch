@@ -1,0 +1,25 @@
+context:
+  name: kakoune
+  version: 2021.11.08
+  github: https://github.com/mawww/kakoune
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+source:
+  url: '{{ github }}/archive/refs/tags/v{{ version }}.tar.gz'
+  sha256: 0885dc65377057fcfea0e7053d01d95a83668ec1907aced84dface8e00b83dee
+
+build:
+  number: 0
+
+about:
+  home: '{{ github }}'
+  summary: 'Modal editor — Faster as in fewer keystrokes — Multiple selections — Orthogonal design'
+  license: OTHER
+  license_file: UNLICENSE
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot

@@ -1,0 +1,21 @@
+context:
+  name: noactivate-env
+  version: 0.0.1
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+build:
+  number: 6
+  noarch: generic
+
+about:
+  home: https://github.com/eyepatchParrot/conda_stitch
+  summary: 'Conda without the activation'
+  license: BSD
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot

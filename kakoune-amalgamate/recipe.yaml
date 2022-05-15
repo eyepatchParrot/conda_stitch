@@ -1,0 +1,21 @@
+context:
+  name: kakoune-amalgamate
+  version: 0.0.1
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+build:
+  number: 2
+  noarch: generic
+
+about:
+  home: https://github.com/eyepatchParrot/conda_stitch
+  summary: 'Kakoune user config in one file'
+  license: BSD
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot
