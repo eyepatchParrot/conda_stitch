@@ -1,0 +1,26 @@
+context:
+  name: catch2
+  version: 2.13.8
+  github: https://github.com/catchorg/Catch2
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - "{{ compiler('cxx') }}"
+    - vcpkg
+    - pkg-config
+
+about:
+  home: '{{ github }}'
+  license: BSL
+  license_file: LICENSE.txt
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot
