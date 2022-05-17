@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
+realpath() { ( cd -P $1 ; echo $PWD ) ; }
 LINK_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 LINK_NAME=$(basename $0)
 export CONDA_PREFIX=$(realpath "${LINK_DIR}/../../..") # /opt/conda/envs/good-base/share/noactivate-env/bin/../../..
