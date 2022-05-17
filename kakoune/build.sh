@@ -1,1 +1,1 @@
-make -j$CPU_COUNT install
+CXXFLAGS=-D_LIBCPP_DISABLE_AVAILABILITY make -j$CPU_COUNT install

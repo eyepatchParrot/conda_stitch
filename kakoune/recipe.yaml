@@ -14,6 +14,10 @@ source:
 build:
   number: 0
 
+requirements:
+  build:
+    - "{{ compiler('cxx') }}"
+
 about:
   home: '{{ github }}'
   summary: 'Modal editor — Faster as in fewer keystrokes — Multiple selections — Orthogonal design'
