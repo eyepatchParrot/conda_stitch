@@ -1,0 +1,2 @@
+load("//tools/bazel:conda_repositories.bzl", "conda_repositories")
+conda_repositories()

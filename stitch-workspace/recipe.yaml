@@ -1,0 +1,21 @@
+context:
+  name: stitch-workspace
+  version: 0.0.1
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+build:
+  number: 12
+  noarch: generic
+
+about:
+  home: https://github.com/eyepatchParrot/conda_stitch
+  summary: 'Stitch bazel workspace from conda packages'
+  license: BSD
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot
