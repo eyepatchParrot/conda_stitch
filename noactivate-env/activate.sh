@@ -10,7 +10,7 @@ conda_noactivate_env_cat_activate() {
 conda_noactivate_env_import() {
 [ -z "${CONDA_NOACTIVATE_SKIP}" ] || return 0
 [ -d "$CONDA_PREFIX/bin" ] || return 0
-local wrapdir="$CONDA_NOACTIVATE_ACTIVATEDIR/bin"
+local wrapdir="$CONDA_PREFIX/share/noactivate-env/bin"
 [ -d $wrapdir ] && rm -r $wrapdir
 mkdir -p $wrapdir
 pushd $wrapdir > /dev/null
