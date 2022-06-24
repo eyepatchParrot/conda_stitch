@@ -1,0 +1,6 @@
+rule ln
+    command = ln -s $$PWD/$in $out
+
+build ../../kakoune/src/BUILD: ln src.BUILD
+build ../../kakoune/doc/BUILD: ln doc.BUILD
+build ../../kakoune/BUILD: ln BUILD
