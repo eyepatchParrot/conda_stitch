@@ -1,13 +1,13 @@
 context:
   name: stitch-workspace
-  version: 0.0.1
+  version: 0.0.2
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
 build:
-  number: 12
+  number: 0
   noarch: generic
 
 about:

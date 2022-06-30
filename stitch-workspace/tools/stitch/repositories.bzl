@@ -49,6 +49,17 @@ _maybe_archive = repository_rule(
 )
 
 
-
-def conda_repositories(toolchains=[]):
-    pass
+def stitch_repositories(toolchains=[]):
+    _maybe_archive(
+      name = "bazel_skylib",
+      src = "//tools/bazel:bazel_skylib.tgz",
+    )
+    _maybe_archive(
+      name = "rules_rust",
+      src = "//tools/rust:rules_rust.tgz",
+    )
+    _maybe_archive(
+      name="rules_rust_tinyjson",
+      src = "//tools/rust:tinyjson.tgz",
+      build_file = "//tools/rust:BUILD.tinyjson.bazel",
+    )
