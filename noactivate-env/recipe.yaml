@@ -7,8 +7,13 @@ package:
   version: '{{ version }}'
 
 build:
-  number: 12
+  number: 13
   noarch: generic
+  script:
+    - set -x
+    - cp -r $RECIPE_DIR/share $PREFIX
+    - mkdir -p "$PREFIX/etc/conda/activate.d"
+    - cp "$RECIPE_DIR/activate.sh" "${PREFIX}/etc/conda/activate.d/$PKG_NAME_activate.sh"
 
 about:
   home: https://github.com/eyepatchParrot/conda_stitch
