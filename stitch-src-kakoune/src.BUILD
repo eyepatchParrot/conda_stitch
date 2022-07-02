@@ -1,7 +1,7 @@
 filegroup(name="kakoune_srcs", srcs = glob(["*.cc", "*.hh"]) + [":version"])
 
 cc_binary(
-    name = "kakoune",
+    name = "kak",
     srcs = [":kakoune_srcs"],
     copts = ["-std=c++20"],
     visibility = ["//kakoune:__pkg__"],

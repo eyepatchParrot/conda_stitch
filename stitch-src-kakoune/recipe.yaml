@@ -7,7 +7,7 @@ source:
   folder: kakoune
 
 build:
-  number: 0
+  number: 1
   script:
     - mkdir $PREFIX/src
     - cp -r kakoune $PREFIX/src
