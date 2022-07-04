@@ -3,7 +3,11 @@ CONDA_NOACTIVATE_ACTIVATEDIR="$CONDA_PREFIX/etc/conda/activate.d"
 conda_noactivate_env_cat_activate() {
     [ -d "$CONDA_NOACTIVATE_ACTIVATEDIR" ] || return 0
     pushd "${CONDA_NOACTIVATE_ACTIVATEDIR}" > /dev/null
-    cat *.sh > "$CONDA_PREFIX/share/noactivate-env/activate-all.sh"
+    shopt -s nullglob
+    local scripts=(*.sh)
+    shopt -u nullglob
+    touch "$CONDA_PREFIX/share/noactivate-env/activate-all.sh"
+    [ -n "$scripts" ] && cat "$scripts" > "$CONDA_PREFIX/share/noactivate-env/activate-all.sh"
     popd > /dev/null
 }
 
