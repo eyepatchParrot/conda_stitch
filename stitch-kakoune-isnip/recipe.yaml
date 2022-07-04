@@ -1,0 +1,38 @@
+# Have to give this a short name to work around micromamba bug
+context:
+  name: stitch-kak-isnip
+  version: 0.0.2
+  github: https://github.com/eyepatchParrot/conda_stitch
+
+package:
+  name: '{{ name|lower }}'
+  version: '{{ version }}'
+
+build:
+  number: 0
+  noarch: generic
+  script:
+    - DEST=$PREFIX/share/kak/rc
+    - mkdir -p $DEST
+    - cp $RECIPE_DIR/isnip.kak $DEST/isnip.kak
+    - test -f $DEST/isnip.kak
+
+test:
+  exists:
+    files:
+      - share/kak/rc/isnip.kak
+
+requirements:
+  run:
+    - stitch-kakoune
+
+about:
+  home: '{{ github }}'
+  summary: 'Insert-mode snippets for kakoune'
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot
