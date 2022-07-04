@@ -13,7 +13,13 @@ build:
     - set -x
     - cp -r $RECIPE_DIR/share $PREFIX
     - mkdir -p "$PREFIX/etc/conda/activate.d"
-    - cp "$RECIPE_DIR/activate.sh" "${PREFIX}/etc/conda/activate.d/$PKG_NAME_activate.sh"
+    - cp "$RECIPE_DIR/activate.sh" "${PREFIX}/etc/conda/activate.d/${PKG_NAME}_activate.sh"
+
+test:
+  exists:
+    files:
+      - share/noactivate-env/env.sh
+      - etc/conda/activate.d/noactivate-env_activate.sh
 
 about:
   home: https://github.com/eyepatchParrot/conda_stitch
