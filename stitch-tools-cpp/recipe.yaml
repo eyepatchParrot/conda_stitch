@@ -3,15 +3,18 @@ package:
   name: 'stitch-tools-cpp'
   version: 0.0.1
 
-source:
-  path: ../../tools/cpp
-  folder: cpp
-
 build:
   number: 0
   script:
-    - mkdir -p $PREFIX/src/tools
-    - cp -r cpp $PREFIX/src/tools
+    - mkdir -p $BUILD_PREFIX/src/tools ; cp -r $RECIPE_DIR/cpp $BUILD_PREFIX/src/tools ; cd $BUILD_PREFIX/src/tools/cpp
+    - ln -s ../../../x86_64-conda-linux-gnu
+    - pushd bin ; echo ../../../../bin/x86_64-conda-linux-gnu-{cpp,gcc,ld.gold} | xargs -n 1 ln -s ; popd
+    - mkdir lib ; pushd lib
+    - echo ../../../../lib/lib{asan,atomic,gcc_s,gomp,itm,lsan,pcre,quadmath,saproc,stdc++,tinfo,tsan,ubsan}.so* | xargs -n 1 ln -s
+    - ln -s ../../../../lib/gcc
+    - popd
+    - mkdir libexec ; pushd libexec ; ln -s ../../../../libexec/gcc ; popd
+    - mkdir -p $PREFIX/src/tools ; cp -r $BUILD_PREFIX/src/tools/cpp $PREFIX/src/tools
 
 test:
   files:
@@ -32,6 +35,8 @@ test:
       - src/tools/cpp/lib/libgcc_s.so.1
 
 requirements:
+  build:
+    - gxx
   run:
     - stitch-workspace
     - bazel

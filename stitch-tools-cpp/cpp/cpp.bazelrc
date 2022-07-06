@@ -1,0 +1,3 @@
+build --crosstool_top=//tools/cpp:toolchain
+build --extra_toolchains=//tools/cpp:cc-toolchain-local
+build --incompatible_enable_cc_toolchain_resolution

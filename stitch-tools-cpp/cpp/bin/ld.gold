@@ -1,0 +1,9 @@
+#!/bin/bash
+COMPILER_PATH=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+LD=$COMPILER_PATH/../x86_64-conda-linux-gnu/bin/ld.gold #x86_64-conda-linux-gnu-ld.gold
+# _f=$(echo $1 | tail -c +2)
+# cat $_f
+
+export COMPILER_PATH LIBRARY_PATH
+$LD "$@"
+
