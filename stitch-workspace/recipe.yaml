@@ -1,19 +1,28 @@
-context:
+package:
   name: stitch-workspace
   version: 0.0.2
 
-package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
-
 build:
-  number: 0
+  number: 1
   noarch: generic
+  script:
+    - mkdir -p $PREFIX/src
+    - cp -r $RECIPE_DIR/tools $PREFIX/src/
+    - cp $RECIPE_DIR/WORKSPACE $PREFIX/src/
+    - cp $RECIPE_DIR/stitch.bazelrc $PREFIX/src/.bazelrc
+
+test:
+  exists:
+    files:
+      - src/WORKSPACE
+      - src/.bazelrc
+      - src/tools/stitch/repositories.bzl
 
 about:
   home: https://github.com/eyepatchParrot/conda_stitch
   summary: 'Stitch bazel workspace from conda packages'
-  license: BSD
+  license: BSD-3-Clause
+  license_family: BSD
   license_file: LICENSE
 
 extra:

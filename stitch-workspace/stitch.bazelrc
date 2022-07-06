@@ -1,0 +1,3 @@
+try-import %workspace%/tools/buildbuddy/buildbuddy.bazelrc
+try-import %workspace%/tools/cpp/cpp.bazelrc
+try-import %workspace%/.bazelrc.local

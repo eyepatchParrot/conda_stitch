@@ -8,13 +8,22 @@ package:
   version: '{{ version }}'
 
 build:
-  number: 1
+  number: 2
   noarch: generic
+  script:
+    - "[ -f ./rc/fzf.kak ] || exit 1"
+    - mkdir -p "$PREFIX/share/kak/rc/fzf.kak"
+    - cp -r ./rc "$PREFIX/share/kak/rc/fzf.kak"
+
+test:
+  exists:
+    files:
+      - share/kak/rc/fzf.kak
 
 requirements:
   run:
     - fzf
-    - kakoune
+    - stitch-kakoune
 
 source:
   url: '{{ github }}/archive/refs/tags/v{{ version }}.tar.gz'

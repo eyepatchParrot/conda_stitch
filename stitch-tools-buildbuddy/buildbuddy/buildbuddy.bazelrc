@@ -1,0 +1,14 @@
+build:buildbuddy --bes_results_url=https://app.buildbuddy.io/invocation/
+build:buildbuddy --bes_backend=grpcs://remote.buildbuddy.io
+build:buildbuddy --remote_cache=grpcs://remote.buildbuddy.io
+build:buildbuddy --remote_timeout=3600
+build:buildbuddy --remote_executor=grpcs://remote.buildbuddy.io
+build:buildbuddy_debug --experimental_enable_docker_sandbox
+build:buildbuddy_debug --experimental_docker_verbose
+build:buildbuddy_debug --spawn_strategy=docker
+build:buildbuddy_debug --experimental_docker_image=gcr.io/flame-public/executor-docker-default:enterprise-v1.6.0
+build:buildbuddy_toolchain --host_platform=@buildbuddy_toolchain//:platform 
+build:buildbuddy_toolchain --platforms=@buildbuddy_toolchain//:platform 
+build:buildbuddy_toolchain --extra_execution_platforms=@buildbuddy_toolchain//:platform
+build:buildbuddy_toolchain --crosstool_top=@buildbuddy_toolchain//:toolchain
+build:buildbuddy_toolchain --extra_toolchains=@buildbuddy_toolchain//:cc_toolchain

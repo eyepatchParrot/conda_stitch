@@ -1,3 +1,0 @@
-try-import %workspace%/tools/stitch/buildbuddy.bazelrc
-try-import %workspace%/tools/stitch/rust.bazelrc
-try-import %workspace%/tools/stitch/cpp.bazelrc

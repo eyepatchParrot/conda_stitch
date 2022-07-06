@@ -1,0 +1,49 @@
+# gxx would probably be a better name
+package:
+  name: 'stitch-tools-cpp'
+  version: 0.0.1
+
+source:
+  path: ../../tools/cpp
+  folder: cpp
+
+build:
+  number: 0
+  script:
+    - mkdir -p $PREFIX/src/tools
+    - cp -r cpp $PREFIX/src/tools
+
+test:
+  files:
+    - stitch_test_hi/hi.cc
+    - stitch_test_hi/BUILD
+  commands:
+    - cp -r stitch_test_hi $PREFIX/src ; cd $PREFIX/src
+    - bazel build --config=buildbuddy_debug //stitch_test_hi ; bazel build //stitch_test_hi
+    - bazel clean --expunge ; bazel shutdown
+  requires:
+    - stitch-buildbuddy
+  exists:
+    files:
+      - src/tools/cpp/bin/x86_64-conda-linux-gnu-cpp
+      - src/tools/cpp/BUILD
+      - src/tools/cpp/libexec/gcc
+      - src/tools/cpp/lib/gcc
+      - src/tools/cpp/lib/libgcc_s.so.1
+
+requirements:
+  run:
+    - stitch-workspace
+    - bazel
+    - gxx
+
+about:
+  home: 'https://github.com/eyepatchParrot/conda_stitch'
+  summary: 'C++ toolchain'
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot
