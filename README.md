@@ -22,6 +22,17 @@ a package, you can use amalgamate as a reference.
 
 I've included andreyorst/fzf.kak as an example here.
 
+# Mutating the conda environment
+Since when conda installs packages, it hardlinks the files, when you change a file in your environment, it also changes the file in the central package store, corrupting it.
+This means that when you upgrade versions, your changes are preserved in the old packages, but overwritten in the environment, an unpleasant experience, but potentially predictable enough to prepare for.
+If your install is isolated, and you're only doing one environment, I wouldn't anticipate major spreading changes. If you `--always-copy`, the central package store is preserved.
+I haven't yet looked into whether or not files can be installed without write permissions from a package.
+Altogether, not ideal, but potentially survivable.
+
+However, it might be preferable to user fuse to get overlay directories. Conda ships overlayfs-fuse, but that requires fusermount3 to be suid root or to use an unshare to get a separate mount namespace.
+An advantage of the FUSE approach is that I can reuse the distri linux software to merge squashfs into an overlay, and package install becomes downloading squashfs.
+The update experience here is that the user's changes override the update, but those changes are visible in the upperdir.
+
 # noactivate-env
 Conda activate is expensive to do since it launched the conda CLI
 to discover the right environment variables to set. This is more
