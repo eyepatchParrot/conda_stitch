@@ -37,7 +37,7 @@ filegroup(
     srcs = glob(["{}/**".format(dir) for dir in _includes]),
 )
 
-cc_library(name = "cpp", hdrs = [":headers"], includes = _includes,
+cc_library(name = "tools_cpp_toolchain", hdrs = [":headers"], includes = _includes,
     srcs = _libs + [
         ":x86_64-conda-linux-gnu/sysroot/lib/libm.so.6",
         ":x86_64-conda-linux-gnu/sysroot/lib/libc.so.6",

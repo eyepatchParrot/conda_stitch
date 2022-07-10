@@ -6,37 +6,29 @@ package:
 build:
   number: 1
   script:
-    - mkdir -p $BUILD_PREFIX/src/tools ; cp -r $RECIPE_DIR/cpp $BUILD_PREFIX/src/tools ; cd $BUILD_PREFIX/src/tools/cpp
-    - ln -s ../../../x86_64-conda-linux-gnu
-    - pushd bin ; echo ../../../../bin/x86_64-conda-linux-gnu-{cpp,gcc,ld.gold,ar} | xargs -n 1 ln -s ; popd
-    - mkdir lib ; pushd lib
-    - echo ../../../../lib/lib{asan,atomic,gcc_s,gomp,itm,lsan,pcre,quadmath,saproc,stdc++,tinfo,tsan,ubsan}.so* | xargs -n 1 ln -s
-    - ln -s ../../../../lib/gcc
-    - popd
-    - mkdir libexec ; pushd libexec ; ln -s ../../../../libexec/gcc ; popd
-    - mkdir -p $PREFIX/src/tools ; cp -r $BUILD_PREFIX/src/tools/cpp $PREFIX/src/tools
+    - mkdir -p $PREFIX/src/tools ; cp -r $RECIPE_DIR/cpp $PREFIX/src/tools
 
 test:
   files:
-    - stitch_test_hi/hi.cc
-    - stitch_test_hi/BUILD
+    - test_cpp/test_cpp.cc
+    - test_cpp/BUILD
   commands:
-    - cp -r stitch_test_hi $PREFIX/src ; cd $PREFIX/src
-    - bazel build --config=buildbuddy_debug //stitch_test_hi ; bazel build //stitch_test_hi
-    - bazel clean --expunge ; bazel shutdown
+    - cp -r test_cpp $PREFIX/src/tools ; cd $PREFIX/src
+    - bazel test //tools/test_cpp ; bazel clean
+    - bazel test --config=buildbuddy //tools/test_cpp ; bazel clean
+    - bazel clean --expunge
+    - bazel shutdown
   requires:
     - stitch-buildbuddy
   exists:
     files:
-      - src/tools/cpp/bin/x86_64-conda-linux-gnu-cpp
-      - src/tools/cpp/BUILD
-      - src/tools/cpp/libexec/gcc
-      - src/tools/cpp/lib/gcc
-      - src/tools/cpp/lib/libgcc_s.so.1
+      - src/tools/cpp/toolchain/bin/x86_64-conda-linux-gnu-cpp
+      - src/tools/cpp/toolchain/BUILD
+      - src/tools/cpp/toolchain/libexec/gcc
+      - src/tools/cpp/toolchain/lib/gcc
+      - src/tools/cpp/toolchain/lib/libgcc_s.so.1
 
 requirements:
-  build:
-    - gxx
   run:
     - stitch-workspace
     - bazel
