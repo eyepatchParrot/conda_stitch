@@ -10,17 +10,16 @@ source:
 build:
   number: 0
   script:
-    - mkdir -p $BUILD_PREFIX/src/tools ; cp -r $RECIPE_DIR/python $BUILD_PREFIX/src/tools ; cd $BUILD_PREFIX/src/tools/python
-    - mkdir -p $PREFIX/src/tools ; cp -r $BUILD_PREFIX/src/tools/python $PREFIX/src/tools
+    - mkdir -p $PREFIX/src/tools ; cp -r $RECIPE_DIR/python $PREFIX/src/tools
 
 test:
   files:
     - test_python/test_python.py
     - test_python/BUILD
   commands:
-    - cp -r test_python $PREFIX/src/tools/python ; cd $PREFIX/src
-    - bazel test //tools/python/test_python ; bazel clean
-    - bazel test --config=buildbuddy //tools/python/test_python ; bazel clean
+    - cp -r test_python $PREFIX/src/tools ; cd $PREFIX/src
+    - bazel test //tools/test_python ; bazel clean
+    - bazel test --config=buildbuddy //tools/test_python ; bazel clean
     - bazel clean --expunge
     - bazel shutdown
   requires:
