@@ -1,0 +1,45 @@
+context:
+  parent: "$PREFIX/src/src"
+
+package:
+  name: 'stitch-lexy'
+  version: '2022.07.09'
+
+source:
+  url: https://github.com/foonathan/lexy/tarball/42d9e384e7292f698b190479716886856c9c142f
+  fn: lexy.tgz
+  sha256: ba16a8636fe10f50eda54e9f2b0627549a6e80c4577c43a3014c0e5949748ae4
+  patches:
+    - patches/0001-Integrate-lexy-with-bazel.patch
+  folder: lexy
+
+build:
+  number: 0
+  script:
+    - mkdir -p "{{ parent }}"
+    - cp -r lexy "{{ parent }}"
+
+test:
+  commands:
+    - cd $PREFIX/src
+    - bazel test --config=buildbuddy //src/lexy/... ; bazel clean
+    - bazel test //src/lexy/... ; bazel clean
+    - bazel clean --expunge
+    - bazel shutdown
+  requires:
+    - stitch-buildbuddy
+  exists:
+    files:
+      - src/lexy/include/lexy/lexeme.hpp
+      - src/lexy/BUILD
+
+requirements:
+  run:
+    - stitch-unicode.org-ucd
+    - stitch-tools-python
+    - stitch-tools-cpp
+    - stitch-doctest
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot
