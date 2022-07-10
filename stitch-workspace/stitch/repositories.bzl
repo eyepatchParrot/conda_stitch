@@ -23,7 +23,6 @@ def _maybe_archive_impl(ctx):
 _maybe_archive = repository_rule(
     attrs = {
         "src": attr.label(mandatory = True, allow_single_file=True),
-        "toolchains": attr.label_list(default=[]),
         "strip_prefix": attr.string(
             default = "",
             doc = "A directory prefix to strip from the extracted files.",
@@ -49,7 +48,7 @@ _maybe_archive = repository_rule(
 )
 
 
-def stitch_repositories(toolchains=[]):
+def stitch_repositories():
     _maybe_archive(
       name = "bazel_skylib",
       src = "//tools/bazel:bazel_skylib.tgz",
@@ -63,3 +62,14 @@ def stitch_repositories(toolchains=[]):
       src = "//tools/rust:tinyjson.tgz",
       build_file = "//tools/rust:BUILD.tinyjson.bazel",
     )
+
+    # _maybe_archive(
+    #   name = "rules_python",
+    #   src = "//tools/stitch:rules_python.tgz",
+    #   strip_prefix = "rules_python-0.9.0",
+    # )
+
+    # _maybe_archive(
+    #   name = "rules_cc",
+    #   src = "//tools/bazel:rules_cc.tgz",
+    # )

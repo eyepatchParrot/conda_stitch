@@ -1,2 +1,5 @@
 load("//tools/stitch:repositories.bzl", "stitch_repositories")
 stitch_repositories()
+
+local_repository(name="rules_python", path = "tools/python/rules_python")
+local_repository(name="tools_python_toolchain", path = "tools/python/toolchain")

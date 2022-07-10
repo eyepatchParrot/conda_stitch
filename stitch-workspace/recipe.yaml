@@ -1,13 +1,13 @@
 package:
   name: stitch-workspace
-  version: 0.0.2
+  version: 0.0.4
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   script:
-    - mkdir -p $PREFIX/src
-    - cp -r $RECIPE_DIR/tools $PREFIX/src/
+    - mkdir -p $PREFIX/src/tools
+    - cp -r $RECIPE_DIR/stitch $PREFIX/src/tools/
     - cp $RECIPE_DIR/WORKSPACE $PREFIX/src/
     - cp $RECIPE_DIR/stitch.bazelrc $PREFIX/src/.bazelrc
 
@@ -17,6 +17,13 @@ test:
       - src/WORKSPACE
       - src/.bazelrc
       - src/tools/stitch/repositories.bzl
+      - src/BUILD
+
+# Bazel should really be requiring coreutils
+requirements:
+  run:
+    - bazel
+    - coreutils
 
 about:
   home: https://github.com/eyepatchParrot/conda_stitch

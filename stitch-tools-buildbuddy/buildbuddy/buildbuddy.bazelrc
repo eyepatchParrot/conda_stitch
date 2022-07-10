@@ -3,6 +3,7 @@ build:buildbuddy --bes_backend=grpcs://remote.buildbuddy.io
 build:buildbuddy --remote_cache=grpcs://remote.buildbuddy.io
 build:buildbuddy --remote_timeout=3600
 build:buildbuddy --remote_executor=grpcs://remote.buildbuddy.io
+build:buildbuddy --jobs=50
 build:buildbuddy_debug --experimental_enable_docker_sandbox
 build:buildbuddy_debug --experimental_docker_verbose
 build:buildbuddy_debug --spawn_strategy=docker

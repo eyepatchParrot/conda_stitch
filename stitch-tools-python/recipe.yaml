@@ -1,0 +1,51 @@
+package:
+  name: 'stitch-tools-python'
+  version: 0.0.3
+
+source:
+  url: https://github.com/bazelbuild/rules_python/archive/refs/tags/0.10.0.tar.gz
+  sha256: 56dc7569e5dd149e576941bdb67a57e19cd2a7a63cc352b62ac047732008d7e1
+  folder: python/rules_python
+
+build:
+  number: 0
+  script:
+    - mkdir -p $BUILD_PREFIX/src/tools ; cp -r $RECIPE_DIR/python $BUILD_PREFIX/src/tools ; cd $BUILD_PREFIX/src/tools/python
+    - mkdir -p $PREFIX/src/tools ; cp -r $BUILD_PREFIX/src/tools/python $PREFIX/src/tools
+
+test:
+  files:
+    - test_python/test_python.py
+    - test_python/BUILD
+  commands:
+    - cp -r test_python $PREFIX/src/tools/python ; cd $PREFIX/src
+    - bazel test //tools/python/test_python ; bazel clean
+    - bazel test --config=buildbuddy //tools/python/test_python ; bazel clean
+    - bazel clean --expunge
+    - bazel shutdown
+  requires:
+    - stitch-buildbuddy
+  exists:
+    files:
+      - src/tools/python/python.bazelrc
+      - src/tools/python/toolchain/lib/python3.10/ast.py
+      - src/tools/python/toolchain/bin/python3
+      - src/tools/python/toolchain/BUILD.bazel
+      - src/tools/python/toolchain/WORKSPACE
+      - src/tools/python/rules_python/WORKSPACE
+
+requirements:
+  run:
+    - stitch-workspace
+    - python
+
+about:
+  home: 'https://github.com/eyepatchParrot/conda_stitch'
+  summary: 'Python toolchain'
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - eyepatchParrot
