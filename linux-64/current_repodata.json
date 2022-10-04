@@ -1,0 +1,24 @@
+{
+  "info": {
+    "subdir": "linux-64"
+  },
+  "packages": {
+    "stitch-buildbuddy-0.0.2-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-workspace"
+      ],
+      "md5": "39a097d37972f797dad2a520ae8ca709",
+      "name": "stitch-buildbuddy",
+      "sha256": "f73b9cf90de569d2fbdb69f12db55753ff2c1e6ca7311146a250a49a453c9ed3",
+      "size": 7019,
+      "subdir": "linux-64",
+      "timestamp": 1664866523132,
+      "version": "0.0.2"
+    }
+  },
+  "packages.conda": {},
+  "removed": [],
+  "repodata_version": 1
+}
