@@ -29,9 +29,13 @@ If your install is isolated, and you're only doing one environment, I wouldn't a
 I haven't yet looked into whether or not files can be installed without write permissions from a package.
 Altogether, not ideal, but potentially survivable.
 
-However, it might be preferable to user fuse to get overlay directories. Conda ships overlayfs-fuse, but that requires fusermount3 to be suid root or to use an unshare to get a separate mount namespace.
+However, it might be preferable to user fuse to get overlay directories.
+Conda ships overlayfs-fuse, but that requires fusermount3 to be suid root or to use an unshare to get a separate mount namespace.
 An advantage of the FUSE approach is that I can reuse the distri linux software to merge squashfs into an overlay, and package install becomes downloading squashfs.
 The update experience here is that the user's changes override the update, but those changes are visible in the upperdir.
+
+One candidate choice is to put repos as bundles in a common directory, then on activate, clone them into the appropriate directories.
+One reason why this is nice is that it makes it easy to maintain patch files.
 
 # noactivate-env
 Conda activate is expensive to do since it launched the conda CLI
