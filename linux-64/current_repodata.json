@@ -45,7 +45,7 @@
       "sha256": "bd10c5bfc6363d497d24f69f934c51f8afb957cfe571021b9840235053a64106",
       "size": 6689,
       "subdir": "linux-64",
-      "timestamp": 1664978156518,
+      "timestamp": 1664978520547,
       "version": "2.4.8"
     },
     "stitch-kakoune-2022.10.05-hb0f4dca_0.tar.bz2": {
@@ -81,21 +81,23 @@
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
-        "stitch-boost",
+        "stitch-boost >=0.0.2",
         "stitch-doctest",
         "stitch-nanobench",
         "stitch-nativejson-benchmark",
-        "stitch-nlohmann",
+        "stitch-nlohmann >=0.0.2",
         "stitch-pegtl",
         "stitch-rapidjson",
-        "stitch-tools-cpp"
+        "stitch-tools-cpp",
+        "stitch-tools-python",
+        "stitch-unicode.org-ucd"
       ],
-      "md5": "5a818e3f2d99435c0da4b5c86b6dbb85",
+      "md5": "eac9cab09dc87adece30836fd39f2311",
       "name": "stitch-lexy",
-      "sha256": "b763a4a3c82de42dc445b6641e1897f335570d373257128b2b13cefea4a33f35",
-      "size": 2759266,
+      "sha256": "1731b8ecaebc32887ece4675e7314bd39ba52dc075f3f5b1224aac67a5836de6",
+      "size": 2759626,
       "subdir": "linux-64",
-      "timestamp": 1665383646399,
+      "timestamp": 1665420890243,
       "version": "0.0.1"
     },
     "stitch-nanobench-0.0.1-hb0f4dca_0.tar.bz2": {
@@ -109,19 +111,21 @@
       "sha256": "091b1ed1b2e5bfe7b566dbb56f8933cbb713d98543983ecabbcb4c057ce4b173",
       "size": 7518269,
       "subdir": "linux-64",
-      "timestamp": 1665379961044,
+      "timestamp": 1665380255952,
       "version": "0.0.1"
     },
     "stitch-nativejson-benchmark-0.0.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
-      "depends": [],
+      "depends": [
+        "stitch-workspace"
+      ],
       "md5": "f5c3aa527d8c4be2d462d93740afdc77",
       "name": "stitch-nativejson-benchmark",
       "sha256": "f9dc78fecf707c40461ae9f5130c7a9fb886f67750c773ed5650e2a1961a881a",
       "size": 3674071,
       "subdir": "linux-64",
-      "timestamp": 1665381028994,
+      "timestamp": 1665381273629,
       "version": "0.0.1"
     },
     "stitch-nlohmann-0.0.2-hb0f4dca_0.tar.bz2": {
@@ -150,7 +154,7 @@
       "sha256": "80d2d7053dd6afce6e5e10cee1243ca351ffedb1ca6a508dae3d0b3f54292f78",
       "size": 4826315,
       "subdir": "linux-64",
-      "timestamp": 1665383164168,
+      "timestamp": 1665383294601,
       "version": "0.0.1"
     },
     "stitch-rapidjson-0.0.1-hb0f4dca_0.tar.bz2": {
@@ -171,13 +175,15 @@
     "stitch-rules_python-0.0.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
-      "depends": [],
+      "depends": [
+        "stitch-workspace"
+      ],
       "md5": "4d089d18f7f029419910a60116c934cd",
       "name": "stitch-rules_python",
       "sha256": "6124b50015c4b6a6994590f591fff329f3cfd344635317cc6b20239b7104bcdf",
       "size": 9379168,
       "subdir": "linux-64",
-      "timestamp": 1665384491641,
+      "timestamp": 1665384613785,
       "version": "0.0.1"
     },
     "stitch-tools-cpp-0.0.3-hb0f4dca_0.tar.bz2": {
@@ -193,7 +199,7 @@
       "sha256": "e949e95606cc8a58850fddbd158b927538889df0f73b6843867517974e95a0b3",
       "size": 18636,
       "subdir": "linux-64",
-      "timestamp": 1664867873011,
+      "timestamp": 1664869356248,
       "version": "0.0.3"
     },
     "stitch-tools-python-0.0.4-hb0f4dca_0.tar.bz2": {
@@ -201,14 +207,15 @@
       "build_number": 0,
       "depends": [
         "python",
-        "stitch-rules_python"
+        "stitch-rules_python",
+        "stitch-workspace"
       ],
       "md5": "40952782c6202fe53457a17ffe80d121",
       "name": "stitch-tools-python",
       "sha256": "3386075ae5ec22518204a67428e2d0b35a762da4e9972ce89d9aa37025b04d66",
       "size": 7343,
       "subdir": "linux-64",
-      "timestamp": 1665385025536,
+      "timestamp": 1665385650059,
       "version": "0.0.4"
     },
     "stitch-unicode.org-ucd-14.0.0-hb0f4dca_0.tar.bz2": {
@@ -222,7 +229,7 @@
       "sha256": "a892ad98e526bcd676a0571d7fd49677b8f3c6af76bf180c1f5e65d9a7e44f96",
       "size": 304107,
       "subdir": "linux-64",
-      "timestamp": 1664976749702,
+      "timestamp": 1664977233958,
       "version": "14.0.0"
     }
   },
