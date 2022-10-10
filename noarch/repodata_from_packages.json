@@ -3,35 +3,6 @@
     "subdir": "noarch"
   },
   "packages": {
-    "stitch-workspace-0.0.10-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [],
-      "md5": "eae6c9effc343de08d45c4639e465124",
-      "name": "stitch-workspace",
-      "noarch": "generic",
-      "sha256": "e092ded156f13e0841efdcbcd01e9ecd2696540e0023796f364ec587dcd9873b",
-      "size": 8688,
-      "subdir": "noarch",
-      "timestamp": 1664859771917,
-      "version": "0.0.10"
-    },
-    "stitch-workspace-0.0.11-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "git",
-        "ninja"
-      ],
-      "md5": "869992a1663ec27374d792a152eb7ea0",
-      "name": "stitch-workspace",
-      "noarch": "generic",
-      "sha256": "0db2462963f105959d4716c1dd410e373d74d9db39857221103b78cd7c89abd1",
-      "size": 9561,
-      "subdir": "noarch",
-      "timestamp": 1664864432554,
-      "version": "0.0.11"
-    },
     "stitch-workspace-0.0.12-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -47,6 +18,22 @@
       "subdir": "noarch",
       "timestamp": 1664866060924,
       "version": "0.0.12"
+    },
+    "stitch-workspace-0.0.15-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "git",
+        "ninja"
+      ],
+      "md5": "f28d9d40725a464ec493f53cf9718d79",
+      "name": "stitch-workspace",
+      "noarch": "generic",
+      "sha256": "ba04c311cdb5398cbb5a9c1571dff373f7694a3d50d0069efb3f0b9b1d2fecda",
+      "size": 11720,
+      "subdir": "noarch",
+      "timestamp": 1664869625624,
+      "version": "0.0.15"
     }
   },
   "packages.conda": {},
