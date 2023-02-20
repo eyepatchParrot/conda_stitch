@@ -1,6 +1,36 @@
 {
   "channeldata_version": 1,
   "packages": {
+    "cargo-raze": {
+      "activate.d": false,
+      "binary_prefix": false,
+      "deactivate.d": false,
+      "description": null,
+      "dev_url": null,
+      "doc_source_url": null,
+      "doc_url": null,
+      "home": null,
+      "icon_hash": null,
+      "icon_url": null,
+      "identifiers": null,
+      "keywords": null,
+      "license": null,
+      "post_link": false,
+      "pre_link": false,
+      "pre_unlink": false,
+      "recipe_origin": null,
+      "run_exports": {},
+      "source_git_url": null,
+      "source_url": null,
+      "subdirs": [
+        "linux-64"
+      ],
+      "summary": null,
+      "tags": null,
+      "text_prefix": false,
+      "timestamp": 1665459796,
+      "version": "2022.10.10"
+    },
     "stitch-boost": {
       "activate.d": false,
       "binary_prefix": false,
@@ -58,8 +88,8 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1664866593,
-      "version": "0.0.2"
+      "timestamp": 1666238579,
+      "version": "0.0.3"
     },
     "stitch-doctest": {
       "activate.d": false,
@@ -388,8 +418,8 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1664869356,
-      "version": "0.0.3"
+      "timestamp": 1666243020,
+      "version": "0.0.5"
     },
     "stitch-tools-python": {
       "activate.d": false,
@@ -418,8 +448,8 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1665385650,
-      "version": "0.0.4"
+      "timestamp": 1666802814,
+      "version": "0.0.6"
     },
     "stitch-unicode.org-ucd": {
       "activate.d": false,
@@ -448,7 +478,7 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1664977233,
+      "timestamp": 1666238689,
       "version": "14.0.0"
     },
     "stitch-workspace": {
@@ -478,8 +508,39 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1665385274,
-      "version": "0.0.15"
+      "timestamp": 1666802402,
+      "version": "0.0.16"
+    },
+    "stitch2-workspace": {
+      "activate.d": false,
+      "binary_prefix": false,
+      "deactivate.d": false,
+      "description": null,
+      "dev_url": null,
+      "doc_source_url": null,
+      "doc_url": null,
+      "home": null,
+      "icon_hash": null,
+      "icon_url": null,
+      "identifiers": null,
+      "keywords": null,
+      "license": null,
+      "post_link": false,
+      "pre_link": false,
+      "pre_unlink": false,
+      "recipe_origin": null,
+      "run_exports": {},
+      "source_git_url": null,
+      "source_url": null,
+      "subdirs": [
+        "linux-64",
+        "noarch"
+      ],
+      "summary": null,
+      "tags": null,
+      "text_prefix": true,
+      "timestamp": 1676925279,
+      "version": "0.0.1"
     }
   },
   "subdirs": [

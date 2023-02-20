@@ -3,6 +3,23 @@
     "subdir": "linux-64"
   },
   "packages": {
+    "cargo-raze-2022.10.10-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "libzlib >=1.2.12,<1.3.0a0",
+        "openssl <3",
+        "openssl >=1.1.1q,<1.1.2a",
+        "rust"
+      ],
+      "md5": "376e24994a9ead1b4eebd444e8f4f430",
+      "name": "cargo-raze",
+      "sha256": "b1bac42f7ec96412ff3e42c5f97a0d7a3890bdeb66a1b7a3ca6e6200539d1877",
+      "size": 5437867,
+      "subdir": "linux-64",
+      "timestamp": 1665459796142,
+      "version": "2022.10.10"
+    },
     "stitch-boost-0.0.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -47,6 +64,21 @@
       "subdir": "linux-64",
       "timestamp": 1664866593072,
       "version": "0.0.2"
+    },
+    "stitch-buildbuddy-0.0.3-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "stitch-workspace"
+      ],
+      "md5": "8ccf98593a054610e179c1849fd624ed",
+      "name": "stitch-buildbuddy",
+      "sha256": "64ae67fbdef3df65c7884529558553cd622aba281118becd211c09759d0b79b0",
+      "size": 7598,
+      "subdir": "linux-64",
+      "timestamp": 1666238579485,
+      "version": "0.0.3"
     },
     "stitch-doctest-2.4.8-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
@@ -107,10 +139,10 @@
         "stitch-tools-python",
         "stitch-unicode.org-ucd"
       ],
-      "md5": "eac9cab09dc87adece30836fd39f2311",
+      "md5": "f8e4888e72ad967a4ff66990a1dbd1d2",
       "name": "stitch-lexy",
-      "sha256": "1731b8ecaebc32887ece4675e7314bd39ba52dc075f3f5b1224aac67a5836de6",
-      "size": 2759626,
+      "sha256": "773c84a5cd3e875cd2a4733627fe712d252fc3fb57a2c934999a3c314ec8c5a1",
+      "size": 2768125,
       "subdir": "linux-64",
       "timestamp": 1665420890243,
       "version": "0.0.1"
@@ -232,6 +264,56 @@
       "timestamp": 1664869356248,
       "version": "0.0.3"
     },
+    "stitch-tools-cpp-0.0.4-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "coreutils",
+        "gxx",
+        "stitch-workspace"
+      ],
+      "md5": "f7b97142b04077f5102115eb19cde664",
+      "name": "stitch-tools-cpp",
+      "sha256": "5dbd6cabf37724bc92f6a2d55db17ea1956c13483d17a6337e94b6c2d7b8fef1",
+      "size": 19655,
+      "subdir": "linux-64",
+      "timestamp": 1666240897372,
+      "version": "0.0.4"
+    },
+    "stitch-tools-cpp-0.0.4-hb0f4dca_1.tar.bz2": {
+      "build": "hb0f4dca_1",
+      "build_number": 1,
+      "depends": [
+        "bazel",
+        "coreutils",
+        "gxx =12.1.0",
+        "stitch-workspace"
+      ],
+      "md5": "5f8ba0738282c806d24c71add8f43306",
+      "name": "stitch-tools-cpp",
+      "sha256": "f1c8a9661d77bc5e49b2ed70f21332fd305ecb6f9a8a0be1529b131d816c375d",
+      "size": 19627,
+      "subdir": "linux-64",
+      "timestamp": 1666241162986,
+      "version": "0.0.4"
+    },
+    "stitch-tools-cpp-0.0.5-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "gxx =12.1.0",
+        "stitch-workspace"
+      ],
+      "md5": "d1d50c294667677302eeac5bed731a76",
+      "name": "stitch-tools-cpp",
+      "sha256": "b593f1b1e9d09144b5e0eb46170d85c09e8d6cb237932d39aa29ea7ad50fa188",
+      "size": 20299,
+      "subdir": "linux-64",
+      "timestamp": 1666243020694,
+      "version": "0.0.5"
+    },
     "stitch-tools-python-0.0.4-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -248,6 +330,37 @@
       "timestamp": 1665385650059,
       "version": "0.0.4"
     },
+    "stitch-tools-python-0.0.5-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "python",
+        "stitch-rules_python"
+      ],
+      "md5": "1f4c8ba8c0407fea4c252c42fe399095",
+      "name": "stitch-tools-python",
+      "sha256": "ca663007749d5bc7fcf32a646785932a66235ce50edb3d8adcd91de1650618d7",
+      "size": 8758,
+      "subdir": "linux-64",
+      "timestamp": 1666238736564,
+      "version": "0.0.5"
+    },
+    "stitch-tools-python-0.0.6-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "python",
+        "stitch-rules_python",
+        "stitch-workspace"
+      ],
+      "md5": "8696c16eca4d74b7e97df11dc52f58b8",
+      "name": "stitch-tools-python",
+      "sha256": "dc922272cfea58ea9295a0c0dba9f712316f466e5d0c4875322cddee0a00f836",
+      "size": 8812,
+      "subdir": "linux-64",
+      "timestamp": 1666802814475,
+      "version": "0.0.6"
+    },
     "stitch-unicode.org-ucd-14.0.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -261,6 +374,36 @@
       "subdir": "linux-64",
       "timestamp": 1664977233958,
       "version": "14.0.0"
+    },
+    "stitch-unicode.org-ucd-14.0.0-hb0f4dca_1.tar.bz2": {
+      "build": "hb0f4dca_1",
+      "build_number": 1,
+      "depends": [
+        "stitch-workspace"
+      ],
+      "md5": "f853dbb4440a8cf4d6eed4985b5c0d5f",
+      "name": "stitch-unicode.org-ucd",
+      "sha256": "514e4620d5d26e6e61294a93ddddd2c07fb1a8e66523ec0f2a5598517491f42d",
+      "size": 304240,
+      "subdir": "linux-64",
+      "timestamp": 1666238689085,
+      "version": "14.0.0"
+    },
+    "stitch2-workspace-0.0.1-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "git",
+        "gxx =12.1.0"
+      ],
+      "md5": "a802617b05524d1842300a863ccd8b87",
+      "name": "stitch2-workspace",
+      "sha256": "ca8492fe1e2c9204d91d2c6f85decb7c99c28662f538dae756cdcb10f7ab4cba",
+      "size": 5374,
+      "subdir": "linux-64",
+      "timestamp": 1676925204075,
+      "version": "0.0.1"
     }
   },
   "packages.conda": {},
