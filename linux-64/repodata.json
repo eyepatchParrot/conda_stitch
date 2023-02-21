@@ -389,6 +389,23 @@
       "timestamp": 1666238689085,
       "version": "14.0.0"
     },
+    "stitch2-test_cpp-0.0.1-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "git",
+        "gxx =12.1.0",
+        "stitch-workspace >=0.0.6"
+      ],
+      "md5": "91b9cb8d63bc396e6179d0f2277cc6d4",
+      "name": "stitch2-test_cpp",
+      "sha256": "62de36e1ab48bda01b79c99aefedb484e077e9a11c6bf2450b94271d02a1925d",
+      "size": 6782,
+      "subdir": "linux-64",
+      "timestamp": 1676954317516,
+      "version": "0.0.1"
+    },
     "stitch2-workspace-0.0.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
