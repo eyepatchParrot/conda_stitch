@@ -19,7 +19,7 @@
       "timestamp": 1666802402692,
       "version": "0.0.16"
     },
-    "stitch2-rules_stitch-0.0.7-hb0f4dca_0.tar.bz2": {
+    "stitch2-rules_stitch-0.0.9-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
@@ -27,46 +27,30 @@
         "git",
         "stitch2-workspace >=0.0.6"
       ],
-      "md5": "f2d287912eb2186c3266b1d51cd61170",
+      "md5": "e788a2212723138d45381a7b921abde5",
       "name": "stitch2-rules_stitch",
       "noarch": "generic",
-      "sha256": "d53b2b018b8a40b0c584d051c19a24b71c2c443ba180afd67086cd195f0f72de",
-      "size": 7411,
+      "sha256": "19e14bd445550577aaf04f6ee2b7bdfef8e5d6dbb09fc0ba22290ba1aedc54e0",
+      "size": 9237,
       "subdir": "noarch",
-      "timestamp": 1676955456612,
-      "version": "0.0.7"
+      "timestamp": 1677399096784,
+      "version": "0.0.9"
     },
-    "stitch2-workspace-0.0.6-hb0f4dca_0.tar.bz2": {
+    "stitch2-workspace-0.0.9-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
         "bazel",
         "git"
       ],
-      "md5": "54acf9add69da6800920fab2c3a071e1",
+      "md5": "a8b982d5c4b60861858e7cd8a5562a72",
       "name": "stitch2-workspace",
       "noarch": "generic",
-      "sha256": "da84a93a9b703aa2c7179edfcbaf6ea9d1c7e970eebc775d08d447439a279833",
-      "size": 18517,
+      "sha256": "3704a96a1dbf304f5a374182b51f68b2a6e4c039e27f93a2482884f556a8c1d1",
+      "size": 19967,
       "subdir": "noarch",
-      "timestamp": 1676955290461,
-      "version": "0.0.6"
-    },
-    "stitch2-workspace-base-0.0.1-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "bazel",
-        "git"
-      ],
-      "md5": "df3d741f570b99ffc1ac0fb980e3b76e",
-      "name": "stitch2-workspace-base",
-      "noarch": "generic",
-      "sha256": "8b1fa1bd6f0da9813640f5e0e4cc4b833769d92c65b06faf2bd7b628023bef2b",
-      "size": 17901,
-      "subdir": "noarch",
-      "timestamp": 1676954014654,
-      "version": "0.0.1"
+      "timestamp": 1677398984170,
+      "version": "0.0.9"
     }
   },
   "packages.conda": {},
