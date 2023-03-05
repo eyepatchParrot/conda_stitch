@@ -65,20 +65,6 @@
       "timestamp": 1664978520547,
       "version": "2.4.8"
     },
-    "stitch-kakoune-2022.10.05-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "stitch-tools-cpp"
-      ],
-      "md5": "27c346234635877517454f73c55af9e6",
-      "name": "stitch-kakoune",
-      "sha256": "9dd0ab61d2c849de922c815cb99fba898f9c4c62478eaffef189380be19dce68",
-      "size": 14415952,
-      "subdir": "linux-64",
-      "timestamp": 1664946412000,
-      "version": "2022.10.05"
-    },
     "stitch-kakoune-install-2022.10.05-hb0f4dca_1.tar.bz2": {
       "build": "hb0f4dca_1",
       "build_number": 1,
@@ -114,7 +100,7 @@
       "sha256": "773c84a5cd3e875cd2a4733627fe712d252fc3fb57a2c934999a3c314ec8c5a1",
       "size": 2768125,
       "subdir": "linux-64",
-      "timestamp": 1665420890243,
+      "timestamp": 1666802961914,
       "version": "0.0.1"
     },
     "stitch-nanobench-0.0.1-hb0f4dca_0.tar.bz2": {
@@ -263,33 +249,48 @@
       "timestamp": 1666238689085,
       "version": "14.0.0"
     },
+    "stitch-workspace-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel"
+      ],
+      "md5": "2deed7282fc2417396f56bbc8af575ad",
+      "name": "stitch-workspace",
+      "sha256": "dfc8eaa9a6944c37ba7630b3f5c21c5038cbbebc49734d81ffd7b7b821f8052e",
+      "size": 21402,
+      "subdir": "linux-64",
+      "timestamp": 1678002096777,
+      "version": "0.1.0"
+    },
     "stitch2-buildbuddy-0.0.2-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
         "stitch2-workspace >=0.0.9"
       ],
-      "md5": "657869712cfd63b479197c06f4a5cdac",
+      "md5": "156edddbaf5874c6b4c56a305dd12dc7",
       "name": "stitch2-buildbuddy",
-      "sha256": "376fbd66f6579b29e2c44a9dcbb2c4e1f9940c526adc7a2e1c13defa34bbb14a",
-      "size": 9698,
+      "sha256": "fc989f3c844b0b3249d405dcd92bfb17fdadfd13773383ba39263ac8bc4f379a",
+      "size": 9226,
       "subdir": "linux-64",
-      "timestamp": 1677399250078,
+      "timestamp": 1677489449608,
       "version": "0.0.2"
     },
-    "stitch2-kakoune-0.0.1-hb0f4dca_0.tar.bz2": {
+    "stitch2-kakoune-0.0.3-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
+        "stitch2-rules_stitch >=0.0.9",
         "stitch2-toolchain_conda_gxx >=0.0.2"
       ],
-      "md5": "c4d912d5f360d44aced1d9226eb3d593",
+      "md5": "779354c0663bc64591915541a204273a",
       "name": "stitch2-kakoune",
-      "sha256": "9d0a6022f7bfbc2f38ebd4891fb701cc0045cda19851514810b33234a90c3d20",
-      "size": 14421444,
+      "sha256": "e5610f96301c0b7a299c2628d099ada1c5b4760d82da7e750773a01edcc87d37",
+      "size": 14623905,
       "subdir": "linux-64",
-      "timestamp": 1677398824573,
-      "version": "0.0.1"
+      "timestamp": 1677822964797,
+      "version": "0.0.3"
     },
     "stitch2-test_cpp-0.0.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
@@ -298,17 +299,17 @@
         "bazel",
         "git",
         "gxx =12.1.0",
-        "stitch-workspace >=0.0.6"
+        "stitch2-rules_stitch >=0.0.7"
       ],
       "md5": "91b9cb8d63bc396e6179d0f2277cc6d4",
       "name": "stitch2-test_cpp",
       "sha256": "62de36e1ab48bda01b79c99aefedb484e077e9a11c6bf2450b94271d02a1925d",
       "size": 6782,
       "subdir": "linux-64",
-      "timestamp": 1676954317516,
+      "timestamp": 1676955774496,
       "version": "0.0.1"
     },
-    "stitch2-toolchain_conda_gxx-0.0.2-hb0f4dca_0.tar.bz2": {
+    "stitch2-toolchain_conda_gxx-0.0.5-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
@@ -317,45 +318,28 @@
         "stitch2-rules_stitch >=0.0.8",
         "stitch2-workspace >=0.0.8"
       ],
-      "md5": "1261a3a7d5a9624b903877ce96898e81",
+      "md5": "f7afeac61f7929d91f1e40c814c1bf45",
       "name": "stitch2-toolchain_conda_gxx",
-      "sha256": "440c206a8da773d25a9c1c306fdcdcbd2083560f7993aa9776b97da7bcb6e3cb",
-      "size": 15546,
+      "sha256": "06f110ccff5841df753be393227c437a5ac2716935690b20d29ab460ed030670",
+      "size": 17789,
       "subdir": "linux-64",
-      "timestamp": 1677396238172,
-      "version": "0.0.2"
+      "timestamp": 1677490669452,
+      "version": "0.0.5"
     },
-    "stitch2-toolchain_gxx_conda-0.0.1-hb0f4dca_0.tar.bz2": {
+    "stitch2-workspace-0.0.14-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
         "bazel",
-        "gxx =12.1.0",
-        "stitch-workspace"
+        "git"
       ],
-      "md5": "28ce44137c2731b33dcedfb6afee7bda",
-      "name": "stitch2-toolchain_gxx_conda",
-      "sha256": "b10033ecdbadda1f267b635fcfafcb3fb9ce4bb69ae3f019f5802e872d49bda7",
-      "size": 13990,
-      "subdir": "linux-64",
-      "timestamp": 1677394122244,
-      "version": "0.0.1"
-    },
-    "stitch2-workspace-0.0.1-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "bazel",
-        "git",
-        "gxx =12.1.0"
-      ],
-      "md5": "a802617b05524d1842300a863ccd8b87",
+      "md5": "080dce7511ac87b101bf4124e5d42d07",
       "name": "stitch2-workspace",
-      "sha256": "ca8492fe1e2c9204d91d2c6f85decb7c99c28662f538dae756cdcb10f7ab4cba",
-      "size": 5374,
+      "sha256": "bfed779a6d6644cd5b7a5da931990071a9a025e9cd6726306f253866389c78cd",
+      "size": 22286,
       "subdir": "linux-64",
-      "timestamp": 1676925204075,
-      "version": "0.0.1"
+      "timestamp": 1677490369264,
+      "version": "0.0.14"
     }
   },
   "packages.conda": {},

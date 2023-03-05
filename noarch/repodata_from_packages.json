@@ -3,6 +3,150 @@
     "subdir": "noarch"
   },
   "packages": {
+    "stitch-bazel_skylib-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "git",
+        "stitch-workspace >=0.1.1"
+      ],
+      "md5": "5b7f62c17d7f178ddec5500c4d658708",
+      "name": "stitch-bazel_skylib",
+      "noarch": "generic",
+      "sha256": "3d825757cebb03c6a39db6a87141d64c418c543cf960964937bd3284b9965baf",
+      "size": 687534,
+      "subdir": "noarch",
+      "timestamp": 1678008247432,
+      "version": "0.1.0"
+    },
+    "stitch-bazel_skylib-0.1.1-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "git",
+        "stitch-workspace >=0.1.1"
+      ],
+      "md5": "17b6ca0975983f005aabb5f59620d2cc",
+      "name": "stitch-bazel_skylib",
+      "noarch": "generic",
+      "sha256": "11c1782504364617a81c00e2e79e85fffae8650773c423a9ca5f8ffa9866042c",
+      "size": 680775,
+      "subdir": "noarch",
+      "timestamp": 1678008353726,
+      "version": "0.1.1"
+    },
+    "stitch-buildbuddy-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-workspace >=0.1.0"
+      ],
+      "md5": "66a4fdb168e3791551ecf6547208435e",
+      "name": "stitch-buildbuddy",
+      "noarch": "generic",
+      "sha256": "5e22c97dda25252820492217337bcbebf4198a81ac1ce1978dfc2d2991c4a74d",
+      "size": 10449,
+      "subdir": "noarch",
+      "timestamp": 1678004003698,
+      "version": "0.1.0"
+    },
+    "stitch-buildbuddy-0.1.1-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-workspace >=0.1.0"
+      ],
+      "md5": "340345fe50a61970bc0874748860ff1f",
+      "name": "stitch-buildbuddy",
+      "noarch": "generic",
+      "sha256": "023f901e876e323aae192997eb001df6a5f144244208415a38b2d46b173c657d",
+      "size": 11370,
+      "subdir": "noarch",
+      "timestamp": 1678006633574,
+      "version": "0.1.1"
+    },
+    "stitch-kakoune-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-toolchain_conda_gxx >=0.1.0"
+      ],
+      "md5": "588dd4b341b358794a6c151d8e4db72b",
+      "name": "stitch-kakoune",
+      "noarch": "generic",
+      "sha256": "34025e6768a27cae5f21d7110c4ce30d250dad67dd70c1c5e9c6765b496e4cb6",
+      "size": 15290099,
+      "subdir": "noarch",
+      "timestamp": 1678007065380,
+      "version": "0.1.0"
+    },
+    "stitch-local_stitch-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-bazel_skylib >=0.1.0",
+        "stitch-workspace >=0.1.1"
+      ],
+      "md5": "042efacf1e9bfcac3edfcec91d9919bf",
+      "name": "stitch-local_stitch",
+      "noarch": "generic",
+      "sha256": "17c1bd7a5198eef2846f9ac197992fea82b50c72f2ee75bc092e2c64ff447e48",
+      "size": 12275,
+      "subdir": "noarch",
+      "timestamp": 1678008379923,
+      "version": "0.1.0"
+    },
+    "stitch-rules_stitch-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "stitch-workspace >=0.1.0"
+      ],
+      "md5": "7a7be2027d2fee41caf5ed7ce0f8eb8e",
+      "name": "stitch-rules_stitch",
+      "noarch": "generic",
+      "sha256": "41d03a04d596a0168b2b3b7e843c38e04189c3795395074548a4c2b07cc9dce7",
+      "size": 14394,
+      "subdir": "noarch",
+      "timestamp": 1678004138618,
+      "version": "0.1.0"
+    },
+    "stitch-stitch_local-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-bazel_skylib >=0.1.0",
+        "stitch-workspace >=0.1.1"
+      ],
+      "md5": "6bb57a0adc83e6c500fcbed0fd4f4a49",
+      "name": "stitch-stitch_local",
+      "noarch": "generic",
+      "sha256": "d6e733da9431c293b65518f7cdf659874656abdb0659598e5a20423e196d26b6",
+      "size": 12391,
+      "subdir": "noarch",
+      "timestamp": 1678008573377,
+      "version": "0.1.0"
+    },
+    "stitch-toolchain_conda_gxx-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "gxx =12.1.0",
+        "stitch-workspace >=0.1.1"
+      ],
+      "md5": "7668e6389a1d66f40626dadb06cb7372",
+      "name": "stitch-toolchain_conda_gxx",
+      "noarch": "generic",
+      "sha256": "8267db46636d50485cbe7e21ba7ce65df0ced990e8b31d634ca1c4edc0982a95",
+      "size": 26997,
+      "subdir": "noarch",
+      "timestamp": 1678005456091,
+      "version": "0.1.0"
+    },
     "stitch-workspace-0.0.12-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -51,12 +195,79 @@
       "timestamp": 1666802402692,
       "version": "0.0.16"
     },
+    "stitch-workspace-0.1.1-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel"
+      ],
+      "md5": "c816c60d71a0969babf6de6c75ba5b1e",
+      "name": "stitch-workspace",
+      "noarch": "generic",
+      "sha256": "3557b94a9e6a4eca00df6f0fe367f3511fdde3046022a4fdfb55b5047775dd72",
+      "size": 21686,
+      "subdir": "noarch",
+      "timestamp": 1678004689033,
+      "version": "0.1.1"
+    },
+    "stitch2-bazel_skylib-0.0.1-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "git",
+        "stitch2-workspace >=0.0.10"
+      ],
+      "md5": "a7dbda77fe371e37e250d8febbd7f406",
+      "name": "stitch2-bazel_skylib",
+      "noarch": "generic",
+      "sha256": "40599235a6aadbb35bddd6423f0695f2a346ba8e89161dd4b8df7a23027485fe",
+      "size": 567985,
+      "subdir": "noarch",
+      "timestamp": 1677489396048,
+      "version": "0.0.1"
+    },
+    "stitch2-rules_python-0.0.3-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "git",
+        "stitch2-workspace >=0.0.10"
+      ],
+      "md5": "3bbe259452d79f2902b9a74fa9e1a841",
+      "name": "stitch2-rules_python",
+      "noarch": "generic",
+      "sha256": "ac79611ead75cbb490df3f5e892aa0cbd309cbd2989924100e2b2a2123aaee29",
+      "size": 9823385,
+      "subdir": "noarch",
+      "timestamp": 1677489173718,
+      "version": "0.0.3"
+    },
+    "stitch2-rules_stitch-0.0.12-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "git",
+        "stitch2-workspace >=0.0.10"
+      ],
+      "md5": "728ba1e0c16cd63a0b410aaf06fb5a02",
+      "name": "stitch2-rules_stitch",
+      "noarch": "generic",
+      "sha256": "ed69dccb97713bb743ca565862fd09f28a2c7616c66d1afcc2059496f4c4f2bf",
+      "size": 10136,
+      "subdir": "noarch",
+      "timestamp": 1677489094000,
+      "version": "0.0.12"
+    },
     "stitch2-rules_stitch-0.0.3-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
         "bazel",
-        "git"
+        "git",
+        "stitch2-workspace"
       ],
       "md5": "b7d715db3c585cd797353f42db215c95",
       "name": "stitch2-rules_stitch",
@@ -64,7 +275,7 @@
       "sha256": "1990005a6aefd9d4d636142e102a4d2ec8cf1c2ed6d01d31f0949768320a6e83",
       "size": 6213,
       "subdir": "noarch",
-      "timestamp": 1676951668375,
+      "timestamp": 1676951690707,
       "version": "0.0.3"
     },
     "stitch2-rules_stitch-0.0.5-hb0f4dca_0.tar.bz2": {
@@ -73,7 +284,7 @@
       "depends": [
         "bazel",
         "git",
-        "stitch2-workspace"
+        "stitch2-workspace >=0.0.5"
       ],
       "md5": "75374375cef68c0dc2c2b1a39a628be7",
       "name": "stitch2-rules_stitch",
@@ -81,7 +292,7 @@
       "sha256": "286a26df65aa9fa49f57ee5e4ee6c15d459e21b6386c56e625709ee34b8cfdc3",
       "size": 7013,
       "subdir": "noarch",
-      "timestamp": 1676953681703,
+      "timestamp": 1676953903792,
       "version": "0.0.5"
     },
     "stitch2-rules_stitch-0.0.6-hb0f4dca_0.tar.bz2": {
@@ -90,7 +301,7 @@
       "depends": [
         "bazel",
         "git",
-        "stitch2-workspace >=0.0.5"
+        "stitch2-workspace >=0.0.6"
       ],
       "md5": "1ad95a3fff386df1df46b85ccf796e0b",
       "name": "stitch2-rules_stitch",
@@ -98,7 +309,7 @@
       "sha256": "e14e5c8de5fea7906698964a7f5940779ddcb2b7009a2e076a3dea846e4c5845",
       "size": 7088,
       "subdir": "noarch",
-      "timestamp": 1676953950396,
+      "timestamp": 1676955377563,
       "version": "0.0.6"
     },
     "stitch2-rules_stitch-0.0.7-hb0f4dca_0.tar.bz2": {
@@ -118,23 +329,6 @@
       "timestamp": 1676955456612,
       "version": "0.0.7"
     },
-    "stitch2-rules_stitch-0.0.8-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "bazel",
-        "git",
-        "stitch2-workspace >=0.0.6"
-      ],
-      "md5": "73ea4b2451419fc3feb6223a03a90ed9",
-      "name": "stitch2-rules_stitch",
-      "noarch": "generic",
-      "sha256": "fc13fb357811e24c3404e2dfc050fd7096ee56e420a8b0e59e9ad3ad31a97461",
-      "size": 9401,
-      "subdir": "noarch",
-      "timestamp": 1677394051582,
-      "version": "0.0.8"
-    },
     "stitch2-rules_stitch-0.0.9-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -152,13 +346,48 @@
       "timestamp": 1677399096784,
       "version": "0.0.9"
     },
+    "stitch2-stitch_local-0.0.2-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch2-bazel_skylib >=0.0.1",
+        "stitch2-rules_stitch >=0.0.12",
+        "stitch2-workspace >=0.0.10"
+      ],
+      "md5": "9f5301925dbb88ae96a2b9b06cbabc05",
+      "name": "stitch2-stitch_local",
+      "noarch": "generic",
+      "sha256": "974c4d748ef235eacf59afff449cd719fc9cbc039310eff800e5942bf4122009",
+      "size": 7902,
+      "subdir": "noarch",
+      "timestamp": 1677489569597,
+      "version": "0.0.2"
+    },
+    "stitch2-toolchain_conda_python-0.0.2-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "python =3.11",
+        "stitch2-rules_python >=0.0.3",
+        "stitch2-rules_stitch >=0.0.12",
+        "stitch2-workspace >=0.0.10"
+      ],
+      "md5": "cdf9c083ad45445ccf14a4620cb7b481",
+      "name": "stitch2-toolchain_conda_python",
+      "noarch": "generic",
+      "sha256": "12f6d1a0386072a5a750b9d4305fac337ae260caf7497f553f9dd63aa8eceba9",
+      "size": 8626,
+      "subdir": "noarch",
+      "timestamp": 1677489321370,
+      "version": "0.0.2"
+    },
     "stitch2-workspace-0.0.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
         "bazel",
-        "git",
-        "gxx =12.1.0"
+        "git"
       ],
       "md5": "d6ad93b6c5ff6ff4ea5bca5cc6c54343",
       "name": "stitch2-workspace",
@@ -166,7 +395,7 @@
       "sha256": "17d88a4a1a4f108612f41da3c59153bbc46b76094847d6d459751c8c789e907e",
       "size": 17074,
       "subdir": "noarch",
-      "timestamp": 1676925279119,
+      "timestamp": 1676950739215,
       "version": "0.0.1"
     },
     "stitch2-workspace-0.0.1-hb0f4dca_1.tar.bz2": {
@@ -198,7 +427,7 @@
       "sha256": "f232e5b403405737238657984b49c2517f78614ddc73aac1a3c46eaa1659bf26",
       "size": 17101,
       "subdir": "noarch",
-      "timestamp": 1676950939268,
+      "timestamp": 1676951028722,
       "version": "0.0.1"
     },
     "stitch2-workspace-0.0.2-hb0f4dca_0.tar.bz2": {
@@ -214,7 +443,7 @@
       "sha256": "f01499df053c55903587f8b4c7f884f32e782b230b2fb2b7dbac9bb07903171b",
       "size": 17260,
       "subdir": "noarch",
-      "timestamp": 1676951073630,
+      "timestamp": 1676951197888,
       "version": "0.0.2"
     },
     "stitch2-workspace-0.0.3-hb0f4dca_0.tar.bz2": {
@@ -246,7 +475,7 @@
       "sha256": "d9241468b779694d7bb8f6e5c1b296e0ea5e6c11b57a8f10a080260e06d5efaf",
       "size": 18193,
       "subdir": "noarch",
-      "timestamp": 1676953594919,
+      "timestamp": 1676955223158,
       "version": "0.0.5"
     },
     "stitch2-workspace-0.0.6-hb0f4dca_0.tar.bz2": {
@@ -256,46 +485,14 @@
         "bazel",
         "git"
       ],
-      "md5": "aad798717ed89592a54a37a3e19775db",
+      "md5": "54acf9add69da6800920fab2c3a071e1",
       "name": "stitch2-workspace",
       "noarch": "generic",
-      "sha256": "5551e8892d5242f0401c35489a128669d23290aace6807e9cdc9fc0a37318af5",
-      "size": 19385,
+      "sha256": "da84a93a9b703aa2c7179edfcbaf6ea9d1c7e970eebc775d08d447439a279833",
+      "size": 18517,
       "subdir": "noarch",
       "timestamp": 1676955290461,
       "version": "0.0.6"
-    },
-    "stitch2-workspace-0.0.7-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "bazel",
-        "git"
-      ],
-      "md5": "c00124a2bc2e6aaf00c1e3b9e78d715d",
-      "name": "stitch2-workspace",
-      "noarch": "generic",
-      "sha256": "513846f88b45a3a15fb8d2f840ff832119dd94bd6e22b15b8861034bff2b5257",
-      "size": 19417,
-      "subdir": "noarch",
-      "timestamp": 1677393902994,
-      "version": "0.0.7"
-    },
-    "stitch2-workspace-0.0.8-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "bazel",
-        "git"
-      ],
-      "md5": "049eae27920f8b0f1d4ee7af940ef7ea",
-      "name": "stitch2-workspace",
-      "noarch": "generic",
-      "sha256": "6a5c8478f9e09e8d8292f2143558eef44ae24c4c825cae55c2f4ffd7505a0a90",
-      "size": 19544,
-      "subdir": "noarch",
-      "timestamp": 1677396006308,
-      "version": "0.0.8"
     },
     "stitch2-workspace-0.0.9-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
