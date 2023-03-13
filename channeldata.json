@@ -180,7 +180,7 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678007065,
+      "timestamp": 1678680733,
       "version": "2022.10.05"
     },
     "stitch-kakoune-install": {
@@ -445,13 +445,14 @@
       "source_git_url": null,
       "source_url": null,
       "subdirs": [
-        "linux-64"
+        "linux-64",
+        "noarch"
       ],
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1665384613,
-      "version": "0.0.1"
+      "timestamp": 1678675196,
+      "version": "0.1.0"
     },
     "stitch-rules_stitch": {
       "activate.d": false,
@@ -480,7 +481,37 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678004138,
+      "timestamp": 1678679781,
+      "version": "0.1.1"
+    },
+    "stitch-sphinx_build": {
+      "activate.d": false,
+      "binary_prefix": false,
+      "deactivate.d": false,
+      "description": null,
+      "dev_url": null,
+      "doc_source_url": null,
+      "doc_url": null,
+      "home": null,
+      "icon_hash": null,
+      "icon_url": null,
+      "identifiers": null,
+      "keywords": null,
+      "license": null,
+      "post_link": false,
+      "pre_link": false,
+      "pre_unlink": false,
+      "recipe_origin": null,
+      "run_exports": {},
+      "source_git_url": null,
+      "source_url": null,
+      "subdirs": [
+        "noarch"
+      ],
+      "summary": null,
+      "tags": null,
+      "text_prefix": false,
+      "timestamp": 1678677883,
       "version": "0.1.0"
     },
     "stitch-stitch_local": {
@@ -510,8 +541,8 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678008573,
-      "version": "0.1.0"
+      "timestamp": 1678680161,
+      "version": "0.1.1"
     },
     "stitch-toolchain_conda_gxx": {
       "activate.d": false,
@@ -541,6 +572,36 @@
       "tags": null,
       "text_prefix": false,
       "timestamp": 1678005456,
+      "version": "0.1.0"
+    },
+    "stitch-toolchain_conda_python": {
+      "activate.d": false,
+      "binary_prefix": false,
+      "deactivate.d": false,
+      "description": null,
+      "dev_url": null,
+      "doc_source_url": null,
+      "doc_url": null,
+      "home": null,
+      "icon_hash": null,
+      "icon_url": null,
+      "identifiers": null,
+      "keywords": null,
+      "license": null,
+      "post_link": false,
+      "pre_link": false,
+      "pre_unlink": false,
+      "recipe_origin": null,
+      "run_exports": {},
+      "source_git_url": null,
+      "source_url": null,
+      "subdirs": [
+        "noarch"
+      ],
+      "summary": null,
+      "tags": null,
+      "text_prefix": false,
+      "timestamp": 1678675996,
       "version": "0.1.0"
     },
     "stitch-tools-cpp": {
@@ -663,6 +724,36 @@
       "text_prefix": false,
       "timestamp": 1678004689,
       "version": "0.1.1"
+    },
+    "stitch-xo": {
+      "activate.d": false,
+      "binary_prefix": false,
+      "deactivate.d": false,
+      "description": null,
+      "dev_url": null,
+      "doc_source_url": null,
+      "doc_url": null,
+      "home": null,
+      "icon_hash": null,
+      "icon_url": null,
+      "identifiers": null,
+      "keywords": null,
+      "license": null,
+      "post_link": false,
+      "pre_link": false,
+      "pre_unlink": false,
+      "recipe_origin": null,
+      "run_exports": {},
+      "source_git_url": null,
+      "source_url": null,
+      "subdirs": [
+        "noarch"
+      ],
+      "summary": null,
+      "tags": null,
+      "text_prefix": false,
+      "timestamp": 1678681716,
+      "version": "0.1.0"
     },
     "stitch2-bazel_skylib": {
       "activate.d": false,
