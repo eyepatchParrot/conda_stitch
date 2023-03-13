@@ -12,10 +12,10 @@
         "openssl >=1.1.1q,<1.1.2a",
         "rust"
       ],
-      "md5": "376e24994a9ead1b4eebd444e8f4f430",
+      "md5": "0c819b6a4890d0e9f13b236c62e75f47",
       "name": "cargo-raze",
-      "sha256": "b1bac42f7ec96412ff3e42c5f97a0d7a3890bdeb66a1b7a3ca6e6200539d1877",
-      "size": 5437867,
+      "sha256": "07c0753a5bff33385d29a0cebbd702297714ee43ce55e6e85033062cfa7eeea4",
+      "size": 5492964,
       "subdir": "linux-64",
       "timestamp": 1665459796142,
       "version": "2022.10.10"

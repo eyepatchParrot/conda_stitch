@@ -82,6 +82,39 @@
       "timestamp": 1678675196715,
       "version": "0.1.0"
     },
+    "stitch-rules_rust-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "stitch-rules_rust_tinyjson >=0.1.0",
+        "stitch-workspace >=0.1.2"
+      ],
+      "md5": "94c74fabb74fe5efb98d6477019272a1",
+      "name": "stitch-rules_rust",
+      "noarch": "generic",
+      "sha256": "39cb97eb63d4395d02e74717ef3edc1617521dc017fb77c93c416b77d6b672cc",
+      "size": 6969955,
+      "subdir": "noarch",
+      "timestamp": 1678687149738,
+      "version": "0.1.0"
+    },
+    "stitch-rules_rust_tinyjson-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "stitch-workspace >=0.1.2"
+      ],
+      "md5": "64bf23a61b0c2ce5c5589db806c4d4dd",
+      "name": "stitch-rules_rust_tinyjson",
+      "noarch": "generic",
+      "sha256": "eb7eac9593888123c6e05af02717fe3fa93b47af0d389c0edc6128760b980ffb",
+      "size": 30283,
+      "subdir": "noarch",
+      "timestamp": 1678686918285,
+      "version": "0.1.0"
+    },
     "stitch-rules_stitch-0.1.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -167,20 +200,37 @@
       "timestamp": 1678675996124,
       "version": "0.1.0"
     },
-    "stitch-workspace-0.1.1-hb0f4dca_0.tar.bz2": {
+    "stitch-toolchain_conda_rust-0.1.0-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "bazel",
+        "rust",
+        "stitch-workspace >=0.1.2"
+      ],
+      "md5": "c3e87fa534cf53da85974955875e3911",
+      "name": "stitch-toolchain_conda_rust",
+      "noarch": "generic",
+      "sha256": "aa28a2e3d60627c715bc6df9f990dcbbb3c2c5d9a7601f9351a9cbf69d790eb0",
+      "size": 11640,
+      "subdir": "noarch",
+      "timestamp": 1678687850821,
+      "version": "0.1.0"
+    },
+    "stitch-workspace-0.1.2-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
         "bazel"
       ],
-      "md5": "c816c60d71a0969babf6de6c75ba5b1e",
+      "md5": "5bc9f91b21e3628b29cc562c1424f541",
       "name": "stitch-workspace",
       "noarch": "generic",
-      "sha256": "3557b94a9e6a4eca00df6f0fe367f3511fdde3046022a4fdfb55b5047775dd72",
-      "size": 21686,
+      "sha256": "e878778ca1d576ef1fabe517390812724bbc3c8980e5c57bd952e745ff17abf4",
+      "size": 22161,
       "subdir": "noarch",
-      "timestamp": 1678004689033,
-      "version": "0.1.1"
+      "timestamp": 1678686546810,
+      "version": "0.1.2"
     },
     "stitch-xo-0.1.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
