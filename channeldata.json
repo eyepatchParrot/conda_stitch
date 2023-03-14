@@ -28,8 +28,8 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1665459796,
-      "version": "2022.10.10"
+      "timestamp": 1678807676,
+      "version": "2022.11.24"
     },
     "stitch-bazel_skylib": {
       "activate.d": false,
@@ -423,6 +423,36 @@
       "timestamp": 1665382362,
       "version": "0.0.1"
     },
+    "stitch-ripgrep": {
+      "activate.d": false,
+      "binary_prefix": false,
+      "deactivate.d": false,
+      "description": null,
+      "dev_url": null,
+      "doc_source_url": null,
+      "doc_url": null,
+      "home": null,
+      "icon_hash": null,
+      "icon_url": null,
+      "identifiers": null,
+      "keywords": null,
+      "license": null,
+      "post_link": false,
+      "pre_link": false,
+      "pre_unlink": false,
+      "recipe_origin": null,
+      "run_exports": {},
+      "source_git_url": null,
+      "source_url": null,
+      "subdirs": [
+        "noarch"
+      ],
+      "summary": null,
+      "tags": null,
+      "text_prefix": false,
+      "timestamp": 1678808978,
+      "version": "0.1.1"
+    },
     "stitch-rules_python": {
       "activate.d": false,
       "binary_prefix": false,
@@ -601,8 +631,8 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678680161,
-      "version": "0.1.1"
+      "timestamp": 1678808764,
+      "version": "0.1.2"
     },
     "stitch-toolchain_conda_gxx": {
       "activate.d": false,

@@ -113,6 +113,21 @@
       "timestamp": 1678008379923,
       "version": "0.1.0"
     },
+    "stitch-ripgrep-0.1.1-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-toolchain_conda_rust >=0.1.0"
+      ],
+      "md5": "015dd8b719d4828df6966a1bbd3b2c03",
+      "name": "stitch-ripgrep",
+      "noarch": "generic",
+      "sha256": "9608599ea3d872bc0c5deee19a161a7cefa40fb62b9b2f3bc7ceed018c97cca8",
+      "size": 19061767,
+      "subdir": "noarch",
+      "timestamp": 1678808978575,
+      "version": "0.1.1"
+    },
     "stitch-rules_python-0.1.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -243,6 +258,22 @@
       "subdir": "noarch",
       "timestamp": 1678680161046,
       "version": "0.1.1"
+    },
+    "stitch-stitch_local-0.1.2-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-bazel_skylib >=0.1.0",
+        "stitch-workspace >=0.1.1"
+      ],
+      "md5": "075762baa10a044d36e9dc9ed7f2fc63",
+      "name": "stitch-stitch_local",
+      "noarch": "generic",
+      "sha256": "692b96d81399b967c80ef9e5ad0a82b807d32a707b96c3bc8e6ad280c9811ab3",
+      "size": 13253,
+      "subdir": "noarch",
+      "timestamp": 1678808764126,
+      "version": "0.1.2"
     },
     "stitch-toolchain_conda_gxx-0.1.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
