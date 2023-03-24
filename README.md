@@ -138,7 +138,7 @@ Currently working:
 
 Each stitch package is managed as a git repository which ships in a conda package for ease of development on that package.
 So, at the moment, this makes finding what's in stitch really opaque.
-It's not ready for primetime yet, so that's OK, but to help with some overview, I've included the channel data in this repo as well.
+It's not ready for primetime yet, so that's OK, but to help with some overview, I've included some channel data to this repo as well in json files.
 
 # What didn't work / is missing?
 The Kakoune plugins have not been ported to the latest breaking change of stitch. Nor has the majority of the lexy packages that I worked on.
