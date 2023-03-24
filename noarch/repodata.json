@@ -97,6 +97,22 @@
       "timestamp": 1678680733697,
       "version": "0.1.1"
     },
+    "stitch-kakoune-0.1.2-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-stitch_local >=0.1.1",
+        "stitch-toolchain_conda_gxx >=0.1.0"
+      ],
+      "md5": "44afbdf8da34949f93dca5c6a4c48264",
+      "name": "stitch-kakoune",
+      "noarch": "generic",
+      "sha256": "acc5ffef80b5b5e426750335b7c61e4038153b75e6279aa2170dec938c7fc11d",
+      "size": 15306324,
+      "subdir": "noarch",
+      "timestamp": 1679066571550,
+      "version": "0.1.2"
+    },
     "stitch-local_stitch-0.1.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -275,6 +291,22 @@
       "timestamp": 1678808764126,
       "version": "0.1.2"
     },
+    "stitch-stitch_local-0.1.3-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "stitch-bazel_skylib >=0.1.0",
+        "stitch-workspace >=0.1.1"
+      ],
+      "md5": "f3b5f27bc074c1b40574aad4f18f04de",
+      "name": "stitch-stitch_local",
+      "noarch": "generic",
+      "sha256": "d8d9b3ac859df89ebc2f28f2f456c10da36ba224802731298ea8ce9951d9cedb",
+      "size": 13884,
+      "subdir": "noarch",
+      "timestamp": 1679069582628,
+      "version": "0.1.3"
+    },
     "stitch-toolchain_conda_gxx-0.1.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -420,6 +452,26 @@
       "subdir": "noarch",
       "timestamp": 1678681716364,
       "version": "0.1.0"
+    },
+    "stitch-xo-0.1.1-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
+      "depends": [
+        "cloud_sptheme",
+        "pygments-cache",
+        "stitch-sphinx_build >=0.1.0",
+        "stitch-stitch_local >=0.1.3",
+        "stitch-toolchain_conda_python >=0.1.0",
+        "urwid"
+      ],
+      "md5": "152062424cdf2f14d1014956d94bd9d8",
+      "name": "stitch-xo",
+      "noarch": "generic",
+      "sha256": "10a26cb86ef7d37dda1a3b8d6750119230a6f87b2a260f155de47da7d89a4ffe",
+      "size": 241749,
+      "subdir": "noarch",
+      "timestamp": 1679069600927,
+      "version": "0.1.1"
     },
     "stitch2-bazel_skylib-0.0.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",

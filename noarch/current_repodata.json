@@ -35,20 +35,21 @@
       "timestamp": 1678006633574,
       "version": "0.1.1"
     },
-    "stitch-kakoune-0.1.1-hb0f4dca_0.tar.bz2": {
+    "stitch-kakoune-0.1.2-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
+        "stitch-stitch_local >=0.1.1",
         "stitch-toolchain_conda_gxx >=0.1.0"
       ],
-      "md5": "74c975fe8ddf050caad59ae36f9f32b3",
+      "md5": "44afbdf8da34949f93dca5c6a4c48264",
       "name": "stitch-kakoune",
       "noarch": "generic",
-      "sha256": "1a1a9bde7f2f1fdec239ffc14cf7688c719b4a0e9c9cc8d8c601ae9e2375c64a",
-      "size": 15297392,
+      "sha256": "acc5ffef80b5b5e426750335b7c61e4038153b75e6279aa2170dec938c7fc11d",
+      "size": 15306324,
       "subdir": "noarch",
-      "timestamp": 1678680733697,
-      "version": "0.1.1"
+      "timestamp": 1679066571550,
+      "version": "0.1.2"
     },
     "stitch-local_stitch-0.1.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
@@ -164,21 +165,21 @@
       "timestamp": 1678677883927,
       "version": "0.1.0"
     },
-    "stitch-stitch_local-0.1.2-hb0f4dca_0.tar.bz2": {
+    "stitch-stitch_local-0.1.3-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
         "stitch-bazel_skylib >=0.1.0",
         "stitch-workspace >=0.1.1"
       ],
-      "md5": "075762baa10a044d36e9dc9ed7f2fc63",
+      "md5": "f3b5f27bc074c1b40574aad4f18f04de",
       "name": "stitch-stitch_local",
       "noarch": "generic",
-      "sha256": "692b96d81399b967c80ef9e5ad0a82b807d32a707b96c3bc8e6ad280c9811ab3",
-      "size": 13253,
+      "sha256": "d8d9b3ac859df89ebc2f28f2f456c10da36ba224802731298ea8ce9951d9cedb",
+      "size": 13884,
       "subdir": "noarch",
-      "timestamp": 1678808764126,
-      "version": "0.1.2"
+      "timestamp": 1679069582628,
+      "version": "0.1.3"
     },
     "stitch-toolchain_conda_gxx-0.1.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
@@ -247,21 +248,25 @@
       "timestamp": 1678686546810,
       "version": "0.1.2"
     },
-    "stitch-xo-0.1.0-hb0f4dca_0.tar.bz2": {
+    "stitch-xo-0.1.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
+        "cloud_sptheme",
+        "pygments-cache",
         "stitch-sphinx_build >=0.1.0",
-        "stitch-toolchain_conda_python >=0.1.0"
+        "stitch-stitch_local >=0.1.3",
+        "stitch-toolchain_conda_python >=0.1.0",
+        "urwid"
       ],
-      "md5": "57a40de40cc73e37e45499f7a4206208",
+      "md5": "152062424cdf2f14d1014956d94bd9d8",
       "name": "stitch-xo",
       "noarch": "generic",
-      "sha256": "13bc128e66a3805929e77bff6a2aaea0149a93a42222f9795e1de04c901a19b0",
-      "size": 241356,
+      "sha256": "10a26cb86ef7d37dda1a3b8d6750119230a6f87b2a260f155de47da7d89a4ffe",
+      "size": 241749,
       "subdir": "noarch",
-      "timestamp": 1678681716364,
-      "version": "0.1.0"
+      "timestamp": 1679069600927,
+      "version": "0.1.1"
     },
     "stitch2-bazel_skylib-0.0.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",

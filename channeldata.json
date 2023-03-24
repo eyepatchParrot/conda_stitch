@@ -180,7 +180,7 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678680733,
+      "timestamp": 1679066571,
       "version": "2022.10.05"
     },
     "stitch-kakoune-install": {
@@ -631,8 +631,8 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678808764,
-      "version": "0.1.2"
+      "timestamp": 1679069582,
+      "version": "0.1.3"
     },
     "stitch-toolchain_conda_gxx": {
       "activate.d": false,
@@ -872,8 +872,8 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678681716,
-      "version": "0.1.0"
+      "timestamp": 1679069600,
+      "version": "0.1.1"
     },
     "stitch2-bazel_skylib": {
       "activate.d": false,
