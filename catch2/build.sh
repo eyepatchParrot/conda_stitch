@@ -1,1 +1,0 @@
-vcpkg install catch2

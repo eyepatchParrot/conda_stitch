@@ -2,99 +2,172 @@ This repo is not affiliated with Anaconda or Conda Forge.
 
 It is a placeholder for a project to build on related technology.
 
-The goal is to use conda to stitch together a development environment
-which has a single worktree / workspace.
+Stitch aims to improve the developer experience for programming anywhere in your dependency graph in any language on any system and share it with others.
+Get started on a new project by specifying your language and adding dependencies as you go.
+Capture those requirements in a recipe and if your friends can install your package, then they can get started changing code anywhere.
 
-- Conda packages to manage your editor [kakoune-conda](#kakoune-conda)
-- Run conda without activating [noactivate-env](#noactivate-env)
-- Spin up a Bazel environment for Rust ([nushell](#porting-nushell))
-- Combine unit tests with slides
+Stitch does this by composing Conda with Bazel to stitch together a development environment which integrates the conda environment with the build configuration.
 
-
-# kakoune-conda
-By making all plugins conda packages you can handle dependency management
-of both plugins and tools. With noactivate-env, simple conda environments
-don't need to be activated to work as expected. With kakoune-amalgamate,
-speed is much improved on slow file systems such as nfs by combining
-into a single file. This refreshes any time a package is installed,
-such as a new plugin. If you needed additional behavior on installing
-a package, you can use amalgamate as a reference.
-
-I've included andreyorst/fzf.kak as an example here.
-
-# Mutating the conda environment
-Since when conda installs packages, it hardlinks the files, when you change a file in your environment, it also changes the file in the central package store, corrupting it.
-This means that when you upgrade versions, your changes are preserved in the old packages, but overwritten in the environment, an unpleasant experience, but potentially predictable enough to prepare for.
-If your install is isolated, and you're only doing one environment, I wouldn't anticipate major spreading changes. If you `--always-copy`, the central package store is preserved.
-I haven't yet looked into whether or not files can be installed without write permissions from a package.
-Altogether, not ideal, but potentially survivable.
-
-However, it might be preferable to user fuse to get overlay directories.
-Conda ships overlayfs-fuse, but that requires fusermount3 to be suid root or to use an unshare to get a separate mount namespace.
-An advantage of the FUSE approach is that I can reuse the distri linux software to merge squashfs into an overlay, and package install becomes downloading squashfs.
-The update experience here is that the user's changes override the update, but those changes are visible in the upperdir.
-
-One candidate choice is to put repos as bundles in a common directory, then on activate, clone them into the appropriate directories.
-One reason why this is nice is that it makes it easy to maintain patch files.
-
-# noactivate-env
-Conda activate is expensive to do since it launched the conda CLI
-to discover the right environment variables to set. This is more
-pronounced on slow storage. Additionally, since it hard codes the
-shell, adding a new shell is a non-trivial amount of work. Here, I
-manually emulate the simple case of setting basic environment
-variables, and allow for an escape hatch if it's needed. In case
-that doesn't work out, by wrapping the initialize block into a
-function, I can turn it on at will without compromising my shell
-startup time.
-
-This lets me use nushell with conda packages without writing special
-integration.
-
-It works in four parts:
-- Escape hatch with a fully activated shell in your PATH as `conda`
-- PATH management to the wrapper directories
-- On activate (triggered by install), refresh symlinks to reflect state of bin
-- env.sh wrapper in a supported shell to wrap execution of the installed executables in an activated shell
-
-See the package for details on activate and env.
+Here's what this could look like.
+My favorite text editor is Kakoune, and it uses lightweight plugins which compose other programs on your system like `fzf`.
+So, a plugin `kak-fzf` lets you split your `tmux` pane to let you search your project accelerating that search with `ripgrep`.
+If I come up wih an idea for how I can add new functionality to `kak-fzf` by modifying ripgrep and integrating with `kak-fzf`, stitch sets up a dev environment where my changes can be integrated together and immediately visible.
 
 ```sh
-#!/bin/sh
-. /Users/pv/conda/etc/profile.d/conda.sh
-export CONDA_DEFAULT_ENV=desktop
-conda "$@"
-```
-This ensures lets conda be used from any shell without writing the
-functions for it. Since desktop is my default for installing my
-main environment, install has the right default here.
-
-`conda` here is a function defined in `conda.sh`, so it is important
-that it be called as a function, not `exec` or any alternatives.
-
-```sh
-PATH=/Users/pv/conda/envs/desktop/share/noactivate-env/bin:/Users/pv/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin ; export PATH
+# Pseudocode assuming micromamba is installed to ~/micromamba using only existing tooling
+micromamba create -n dev stitch-kak-fzf-rg boa && micromamba activate dev # Initialize
+cd ~/micromamba/envs/dev/share/stitch && git clone -b stitch stitch/ripgrep/ripgrep.bundle override/ripgrep # Override
+... # Edit ripgrep
+bazel build --override_repository=ripgrep=$PWD/override ripgrep @stitch_local//:kakoune # Build
+$PWD/../bazel-bin/external/stitch_local/bin/kak # Try
+boa build override/ripgrep/recipe # Share
 ```
 
-.cargo/bin is needed for now to support cargo-raze due to details it
-relies on where it's installed. Other than that, this is a default
-setup with the addition of the noactivate-env/bin
+# Tradeoffs and constraints
+Stitch needs to provide a quality experience under constrained environments.
+Stitch's main offering is to make cross-dependency, multi-language development more pleasant and easier, so if there's a better alternative which is suitable for your environment, you should use that.
+If it misses a key environment constraint, then it may as well not exist, so you have to pick what environments you want to make stitch useful for.
 
+1. Primary objectives
+  - Compile multiple languages together with merged requirements
+  - Make and test changes on separate packages simultaneously
+  - Minimize what is observed from the host system
+  - Incremental integration bootstraps with impure leveraging of existing software
+2. Optimize for
+  - Multiple host OS + distro
+  - Leverage existing popular solutions
+  - Minimize volume of what is relevant for reasoning about compilation, linking, and execution
+  - Discoverability of dependency implementations
+  - Under-powered hosts
 
-# Porting nushell
-nushell required setting up a Bazel environment for Rust. One of
-my goals was to avoid any internet access while the build is running.
-The default mode for Bazel is to take control of downloading tools
-and source. Even validated with a checksum, and with options for
-alternative mirrors, I don't wnat my build system even trying. So,
-instead, I prefill everything needed using conda packages.
+I've included environment constraints separately:
+1. No root required. For example, fuse has mixed policies across distros around permissions, and may need to localize everything to a particular directory like home.
+2. Works with an airgapped build host
+3. Binares are invocable from outside tooling
 
-After getting the infrastructure setup for Bazel, I needed to port
-nushell. The workflow for this starts with cargo vendor, then using
-the cargo-raze utility. I iterate on writing definitions for nushell
-with fixing issues in generated cargo-raze BUILD files.
+There are some shortcuts I've taken to accelerate development, but I believe my larger design choices keep viable.
+Examples include:
+- Multiple OS. Mac development was postponed due to OS updates breaking direct reliance on SDK paths
+- Recipe cleanliness including reliance on transitive dependencies and overly-strict version pins. Architecture data of recipes is dirty as well
+- Multiple platform targets
+- Automation is postponed until the target is more stable
 
-## Infrastructure
+## Multiple languages and merged requirements
+Projects which mix different languages have to be extra careful about diamond dependencies.
+If a C++ package depends on C and Rust packages, and the Rust package depends on some of the same C packages, those versions have to be synchronized.
+So, you need a single source of truth which spans across package managers.
+However, writing packages is hard work, so if you can get that single source of truth by integrating into an existing, large ecosystem or ecosystems, you can save yourself a lot of work.
+
+## Building and testing simultaneously
+This is supported by allowing multiple repos to be overriden simultaneously with their recipe definitions.
+
+## Minimizing host-dependent behavior
+We've been able to minimize a lot of host-dependent behavior by leveraging
+Bazel sandboxes to be confident that language toolchains observe very
+little which is outside of the conda environment. For example, we know that the glibc which conda-forge ships for gcc 12 is incompatible with our Ubuntu 16.04 CI, so we can isolate ourselves from that.
+
+Since we isolate ourselves from the host, and build in a Bazel sandbox
+using packages which are constructed in conda sandboxes, we can have a
+lot more confidence that we can stick to reasoning about our environment
+and not worry about what issues might be observed from the system.
+There are, of course, some exceptions to that at runtime, but building
+a portable package can focus on what's in conda.
+
+Unfortunately, stitch currently requires Python installed to the system for Bazel shebangs. Possibly
+will go away with newer version of Bazel and with custom shebangs and
+alternative is possible, but non-trivial to write.
+
+## Incremental integration
+Incremental integration requires that things built by stitch be able to operate with files and programs outside stitch and be used from files and programs outside stitch.
+Some tradeoffs have more clear-cut threshold effects. So, while supporting
+built binaries with files outside stitch and binaries outside stitch which
+use stitch binaries as sub-processes is high return for effort, crossing
+those boundaries with linkage hurts ability to reason substantially.
+
+## Leveraging existing solutions
+Bazel is chosen as the multiple-OS, multiple-language build system with the most available packages and contributors.
+Conda is chosen as the multiple-OS, multiple-language package manager which meets requirements for root and directories.
+
+Conda has good support for working when airgapped. Bazel workspace
+definitions are idiomatically written in a way which needs the internet,
+but the build system itself works pretty well when airgapped.
+
+## Reasoning
+I include reasoning here since its an explicit objective, but it is more meta than many other objectives.
+Discoverability is intended to improve reasoning about where to look for broken things or for feature ideas.
+Minimizing host observation is intended to reduce what might be broken.
+
+## Discoverability
+`$CONDA_ENV/share/stitch` is the starting point for your project, so all other paths are relative to that.
+You can find what's already installed under `stitch/` since all those are repositories which are automatically discovered.
+New development goes in `override/$MY_NEW_REPO` and is toggled with `.bazelrc.local`
+Other installed files go into `rc/` for things like toolchain bazelrc files (which aren't apart of the repository).
+So, with those 3 folders, you should get a pretty good view of your stitch dependencies.
+However, toolchain dependencies pull in files from the conda environment,
+so you can get a more comprehensive view after doing a build by looking
+at the automatically generated symlink of `bazel-stitch/` and the structure under `bazel-stitch/external/`.
+
+This discoverability then directly enables developers to override
+behavior since each stitch repo ships with the bundle that can be
+immediately cloned with both package source code and recipe.
+
+## Under-powered hosts
+With buildbuddy support, you can get larger caches and faster build-times, even on low-core VMs.
+Since stitch_local works pretty well without an environment activate, you can achieve some workflows even when your environment is on a slow filesystem like NFS
+With use of Bazel, current workflows are a bit heavy handed on memory requirements. I suspect that is reactive and degrades gracefully with limited memory requirements, but it is an issue.
+
+# Where is it now?
+The latest work is tracked in the branch `bld` which can be used as a local channel for installing conda packages. For example, if it's cloned to `/home/pv/bld`, then its usable with the following `.condarc`
+```yaml
+# .condarc
+channels:
+  - /home/pv/bld
+  - conda-forge
+auto_activate_base: false
+channel_priority: strict
+```
+
+Currently working:
+1. Toolchains for Rust, Python, and C++ which use the conda-forge binaries
+2. Integration with buildbuddy for remote cache and build cluster
+3. Kakoune uses the C++ toolchain
+4. xo and sphinx-build use the Python toolchain
+5. Ripgrep uses the Rust toolchain
+6. cargo-raze is built using Cargo from the github repo
+7. With `stitch_local` on your manpath, path, etc, several binaries work out of the box without needing to activate the environment
+
+Each stitch package is managed as a git repository which ships in a conda package for ease of development on that package.
+So, at the moment, this makes finding what's in stitch really opaque.
+It's not ready for primetime yet, so that's OK, but to help with some overview, I've included the channel data in this repo as well.
+
+# What didn't work / is missing?
+The Kakoune plugins have not been ported to the latest breaking change of stitch. Nor has the majority of the lexy packages that I worked on.
+
+I named my packages from stitch-0.0.X (with some names from the origin dep) to stitch2-0.0.X, and current version is stitch-0.1.X.
+
+## Symlink all the things
+Create a Bazel workspace which symlinks from the conda environment into the workspace.
+What was nice about this is that is it improved discoverability and reduced the complexity of C++ include paths.
+However, you were never going to be able to use existing Bazel toolchain rules with this approach because many of them relied on being top-level in the workspace.
+Broadly, this reduced ability to re-use existing Bazel definitions across several packages.
+This means maintaining a lot of symlinks, and in order to stay organized, many of these were very relative. Since the toolchains also rely on relative paths, those paths had to be carefully chosen.
+Finally, if you wanted to change the behavior of the existing system, doing that without modifying files which were installed by conda was not very clean.
+To avoid modifying files, I tried using an activate script to run ninja to detect where your stitched environment was outdated to separate what conda maintained from the user's overrides, but it meant that every conda activate, (made worse by noactivate-env) ran code that could disturb the environment in hard to reason about ways
+
+## Using bazel run
+`stitch_local` exists to allow binaries and system libraries to find each other at the expected paths. In particular, since you need runfiles for C++ to find its system libraries, each binary needs to be able to find those libraries.
+Getting the system libraries and user binaries to load correctly was brittle, and became much less so when I used Bazel to synthesize a unified namespace
+In particular, if you want MANPATH to work correctly, it's much easier to do so if all your manpages are consolidated into the same place
+This also helps cases where binaries look for their files on specific relative directories, like kakoune which searches for plugins at `../share/kak`.
+
+## Custom program interpreter
+Currently, stitch packages run on an incompatible docker container, so we have good reason to believe that our libc dependencies are pretty isolated.
+However, I think that they still rely on the program interpreter. A constraint from Linux as it stands today is that the program interpreter has to be at an absolute path which is hard-coded into the executable.
+Across some glibc upgrades, this creates problems since some program interpreters don't support newer glibcs iirc.
+Because this has to be an absolute path, making it relative to the conda environment is hard, in particular when building new packages which are in a totally new directory tree.
+I think it would be doable to add the program interpreter into `stitch_local` and patchelf it in since conda environments aren't relocatable.
+
+# (Outdated) Infrastructure
 - stitch-bazel_skylib
 - stitch-rust
 - stitch-workspace
