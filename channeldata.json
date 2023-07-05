@@ -270,7 +270,7 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678008379,
+      "timestamp": 1678008474,
       "version": "0.1.0"
     },
     "stitch-nanobench": {
@@ -453,6 +453,36 @@
       "timestamp": 1678808978,
       "version": "0.1.1"
     },
+    "stitch-rules_foreign_cc": {
+      "activate.d": false,
+      "binary_prefix": false,
+      "deactivate.d": false,
+      "description": null,
+      "dev_url": null,
+      "doc_source_url": null,
+      "doc_url": null,
+      "home": null,
+      "icon_hash": null,
+      "icon_url": null,
+      "identifiers": null,
+      "keywords": null,
+      "license": null,
+      "post_link": false,
+      "pre_link": false,
+      "pre_unlink": false,
+      "recipe_origin": null,
+      "run_exports": {},
+      "source_git_url": null,
+      "source_url": null,
+      "subdirs": [
+        "noarch"
+      ],
+      "summary": null,
+      "tags": null,
+      "text_prefix": false,
+      "timestamp": 1688514008,
+      "version": "0.1.0"
+    },
     "stitch-rules_python": {
       "activate.d": false,
       "binary_prefix": false,
@@ -511,7 +541,7 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678687149,
+      "timestamp": 1678687233,
       "version": "0.1.0"
     },
     "stitch-rules_rust_tinyjson": {
@@ -571,7 +601,7 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678679781,
+      "timestamp": 1678679883,
       "version": "0.1.1"
     },
     "stitch-sphinx_build": {
@@ -661,8 +691,8 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678005456,
-      "version": "0.1.0"
+      "timestamp": 1688507589,
+      "version": "0.1.1"
     },
     "stitch-toolchain_conda_python": {
       "activate.d": false,
@@ -721,7 +751,7 @@
       "summary": null,
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678687850,
+      "timestamp": 1678687994,
       "version": "0.1.0"
     },
     "stitch-tools-cpp": {

@@ -3,7 +3,7 @@
     "subdir": "linux-64"
   },
   "packages": {
-    "cargo-raze-2022.11.24-hb0f4dca_0.tar.bz2": {
+    "cargo-raze-2022.10.10-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
@@ -12,13 +12,13 @@
         "openssl >=1.1.1t,<1.1.2a",
         "rust"
       ],
-      "md5": "50847753cf1047d4760c80c5319744f3",
+      "md5": "0c819b6a4890d0e9f13b236c62e75f47",
       "name": "cargo-raze",
-      "sha256": "acf9a856733890fcd04c99987bafe907b418429dd04d0ea33f59b62bd554c950",
-      "size": 17693114,
+      "sha256": "07c0753a5bff33385d29a0cebbd702297714ee43ce55e6e85033062cfa7eeea4",
+      "size": 5492964,
       "subdir": "linux-64",
-      "timestamp": 1678807676462,
-      "version": "2022.11.24"
+      "timestamp": 1678683775025,
+      "version": "2022.10.10"
     },
     "stitch-boost-0.0.2-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
