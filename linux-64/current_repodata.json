@@ -35,21 +35,6 @@
       "timestamp": 1665420373933,
       "version": "0.0.2"
     },
-    "stitch-buildbuddy-0.0.3-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "bazel",
-        "stitch-workspace"
-      ],
-      "md5": "8ccf98593a054610e179c1849fd624ed",
-      "name": "stitch-buildbuddy",
-      "sha256": "64ae67fbdef3df65c7884529558553cd622aba281118becd211c09759d0b79b0",
-      "size": 7598,
-      "subdir": "linux-64",
-      "timestamp": 1666238579485,
-      "version": "0.0.3"
-    },
     "stitch-doctest-2.4.8-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -65,20 +50,23 @@
       "timestamp": 1664978520547,
       "version": "2.4.8"
     },
-    "stitch-kakoune-install-2022.10.05-hb0f4dca_1.tar.bz2": {
-      "build": "hb0f4dca_1",
-      "build_number": 1,
+    "stitch-kakoune-install-0.1.3-hb0f4dca_0.tar.bz2": {
+      "build": "hb0f4dca_0",
+      "build_number": 0,
       "depends": [
-        "stitch-workspace",
+        "libgcc-ng",
+        "libstdcxx-ng",
         "sysroot_linux-64"
       ],
-      "md5": "d877896ff2613aba827d3b62e14a704e",
+      "license": "BSD-3-Clause",
+      "license_family": "BSD",
+      "md5": "e28efae9fb76b57cbe693b6b59881534",
       "name": "stitch-kakoune-install",
-      "sha256": "96afeabd878209e8d4fad37f13565a3afa2c6d1a575caa7b4ab420d8248d147e",
-      "size": 2015029,
+      "sha256": "91e509069ce4cf066dbacba7b2a11e33eebe4da92f7d112b084fae0284459dd4",
+      "size": 2054836,
       "subdir": "linux-64",
-      "timestamp": 1664946507994,
-      "version": "2022.10.05"
+      "timestamp": 1688689065193,
+      "version": "0.1.3"
     },
     "stitch-lexy-0.0.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
@@ -248,20 +236,6 @@
       "subdir": "linux-64",
       "timestamp": 1666238689085,
       "version": "14.0.0"
-    },
-    "stitch-workspace-0.1.0-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "bazel"
-      ],
-      "md5": "2deed7282fc2417396f56bbc8af575ad",
-      "name": "stitch-workspace",
-      "sha256": "dfc8eaa9a6944c37ba7630b3f5c21c5038cbbebc49734d81ffd7b7b821f8052e",
-      "size": 21402,
-      "subdir": "linux-64",
-      "timestamp": 1678002096777,
-      "version": "0.1.0"
     },
     "stitch2-buildbuddy-0.0.2-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
