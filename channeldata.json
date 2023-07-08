@@ -31,6 +31,37 @@
       "timestamp": 1678683775,
       "version": "2022.10.10"
     },
+    "pacman-asp": {
+      "activate.d": false,
+      "binary_prefix": false,
+      "deactivate.d": false,
+      "description": null,
+      "dev_url": null,
+      "doc_source_url": null,
+      "doc_url": null,
+      "home": "https://github.com/falconindy/asp",
+      "icon_hash": null,
+      "icon_url": null,
+      "identifiers": null,
+      "keywords": null,
+      "license": "MIT",
+      "post_link": false,
+      "pre_link": false,
+      "pre_unlink": false,
+      "recipe_origin": null,
+      "run_exports": {},
+      "source_git_url": null,
+      "source_url": null,
+      "subdirs": [
+        "linux-64",
+        "noarch"
+      ],
+      "summary": "Arch Linux build source file management tool",
+      "tags": null,
+      "text_prefix": false,
+      "timestamp": 1688792511,
+      "version": "8"
+    },
     "stitch-bazel_skylib": {
       "activate.d": false,
       "binary_prefix": false,

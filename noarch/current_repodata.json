@@ -3,6 +3,24 @@
     "subdir": "noarch"
   },
   "packages": {
+    "pacman-asp-8-ha5e6943_1.tar.bz2": {
+      "build": "ha5e6943_1",
+      "build_number": 1,
+      "depends": [
+        "git",
+        "jq",
+        "libarchive"
+      ],
+      "license": "MIT",
+      "md5": "5ed1ed1424e63dc568682c408817fdf3",
+      "name": "pacman-asp",
+      "noarch": "generic",
+      "sha256": "890841058dfa51b55a3cdd597a8f5219ddf872e72defeac3872f3582c68617d9",
+      "size": 15964,
+      "subdir": "noarch",
+      "timestamp": 1688792511022,
+      "version": "8"
+    },
     "stitch-bazel_skylib-0.1.1-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
