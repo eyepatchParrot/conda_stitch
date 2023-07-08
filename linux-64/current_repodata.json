@@ -35,21 +35,6 @@
       "timestamp": 1665420373933,
       "version": "0.0.2"
     },
-    "stitch-doctest-2.4.8-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "doctest",
-        "stitch-workspace"
-      ],
-      "md5": "e2a529fbe6dc2eec8cf09f7e632704d7",
-      "name": "stitch-doctest",
-      "sha256": "bd10c5bfc6363d497d24f69f934c51f8afb957cfe571021b9840235053a64106",
-      "size": 6689,
-      "subdir": "linux-64",
-      "timestamp": 1664978520547,
-      "version": "2.4.8"
-    },
     "stitch-kakoune-install-0.1.3-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
@@ -236,20 +221,6 @@
       "subdir": "linux-64",
       "timestamp": 1666238689085,
       "version": "14.0.0"
-    },
-    "stitch2-buildbuddy-0.0.2-hb0f4dca_0.tar.bz2": {
-      "build": "hb0f4dca_0",
-      "build_number": 0,
-      "depends": [
-        "stitch2-workspace >=0.0.9"
-      ],
-      "md5": "156edddbaf5874c6b4c56a305dd12dc7",
-      "name": "stitch2-buildbuddy",
-      "sha256": "fc989f3c844b0b3249d405dcd92bfb17fdadfd13773383ba39263ac8bc4f379a",
-      "size": 9226,
-      "subdir": "linux-64",
-      "timestamp": 1677489449608,
-      "version": "0.0.2"
     },
     "stitch2-kakoune-0.0.3-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",

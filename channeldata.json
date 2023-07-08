@@ -113,6 +113,7 @@
       "source_git_url": null,
       "source_url": null,
       "subdirs": [
+        "linux-64",
         "noarch"
       ],
       "summary": null,
@@ -129,7 +130,7 @@
       "dev_url": null,
       "doc_source_url": null,
       "doc_url": null,
-      "home": null,
+      "home": "https://github.com/eyepatchParrot/conda_stitch",
       "icon_hash": null,
       "icon_url": null,
       "identifiers": null,
@@ -143,13 +144,44 @@
       "source_git_url": null,
       "source_url": null,
       "subdirs": [
-        "linux-64"
+        "linux-64",
+        "noarch"
       ],
-      "summary": null,
+      "summary": "Basic repo",
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1664978520,
+      "timestamp": 1688783722,
       "version": "2.4.8"
+    },
+    "stitch-foonathan-lexy": {
+      "activate.d": false,
+      "binary_prefix": false,
+      "deactivate.d": false,
+      "description": null,
+      "dev_url": null,
+      "doc_source_url": null,
+      "doc_url": null,
+      "home": "https://github.com/eyepatchParrot/conda_stitch",
+      "icon_hash": null,
+      "icon_url": null,
+      "identifiers": null,
+      "keywords": null,
+      "license": null,
+      "post_link": false,
+      "pre_link": false,
+      "pre_unlink": false,
+      "recipe_origin": null,
+      "run_exports": {},
+      "source_git_url": null,
+      "source_url": null,
+      "subdirs": [
+        "noarch"
+      ],
+      "summary": "Basic repo",
+      "tags": null,
+      "text_prefix": false,
+      "timestamp": 1688786773,
+      "version": "0.1.0"
     },
     "stitch-kakoune": {
       "activate.d": false,
@@ -178,8 +210,8 @@
       "summary": "Modal editor\u2009\u2014\u2009Faster as in fewer keystrokes\u2009\u2014\u2009Multiple selections\u2009\u2014\u2009Orthogonal design",
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1688588823,
-      "version": "0.1.3"
+      "timestamp": 1688764806,
+      "version": "0.1.4"
     },
     "stitch-kakoune-install": {
       "activate.d": false,
@@ -449,8 +481,8 @@
       "summary": "Basic repo",
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1688583468,
-      "version": "0.1.1"
+      "timestamp": 1688783174,
+      "version": "0.1.2"
     },
     "stitch-rules_python": {
       "activate.d": false,
@@ -630,8 +662,8 @@
       "summary": "Environment install",
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1688680160,
-      "version": "0.1.4"
+      "timestamp": 1688782569,
+      "version": "0.1.6"
     },
     "stitch-toolchain_conda_gxx": {
       "activate.d": false,
@@ -660,8 +692,8 @@
       "summary": "C++ toolchain",
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1688681497,
-      "version": "0.1.3"
+      "timestamp": 1688782411,
+      "version": "0.1.5"
     },
     "stitch-toolchain_conda_python": {
       "activate.d": false,
@@ -701,12 +733,12 @@
       "dev_url": null,
       "doc_source_url": null,
       "doc_url": null,
-      "home": null,
+      "home": "https://github.com/eyepatchParrot/conda_stitch",
       "icon_hash": null,
       "icon_url": null,
       "identifiers": null,
       "keywords": null,
-      "license": null,
+      "license": "BSD-3-Clause",
       "post_link": false,
       "pre_link": false,
       "pre_unlink": false,
@@ -717,11 +749,11 @@
       "subdirs": [
         "noarch"
       ],
-      "summary": null,
+      "summary": "C++ toolchain",
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678687994,
-      "version": "0.1.0"
+      "timestamp": 1688782847,
+      "version": "0.1.2"
     },
     "stitch-tools-cpp": {
       "activate.d": false,
@@ -821,12 +853,12 @@
       "dev_url": null,
       "doc_source_url": null,
       "doc_url": null,
-      "home": null,
+      "home": "https://github.com/eyepatchParrot/conda_stitch",
       "icon_hash": null,
       "icon_url": null,
       "identifiers": null,
       "keywords": null,
-      "license": null,
+      "license": "BSD-3-Clause",
       "post_link": false,
       "pre_link": false,
       "pre_unlink": false,
@@ -837,11 +869,11 @@
       "subdirs": [
         "noarch"
       ],
-      "summary": null,
+      "summary": "Basic repo",
       "tags": null,
       "text_prefix": false,
-      "timestamp": 1678686546,
-      "version": "0.1.2"
+      "timestamp": 1688782308,
+      "version": "0.1.3"
     },
     "stitch-xo": {
       "activate.d": false,
