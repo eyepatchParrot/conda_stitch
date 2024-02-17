@@ -132,28 +132,26 @@
       "timestamp": 1678008474429,
       "version": "0.1.0"
     },
-    "stitch-rules_foreign_cc-0.1.2-hb0f4dca_0.tar.bz2": {
+    "stitch-rules_foreign_cc-0.1.3-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
         "bazel >=6",
-        "cmake <3.26",
         "ninja",
-        "openssl <3",
         "stitch-bazel_skylib >=0.1.1",
         "stitch-toolchain_conda_gxx >=0.1.5",
         "stitch-workspace >=0.1.1"
       ],
       "license": "BSD-3-Clause",
       "license_family": "BSD",
-      "md5": "0170293b3ef494d93afe9671825d03d1",
+      "md5": "a9e4932a3d791a97b3c6072817749391",
       "name": "stitch-rules_foreign_cc",
       "noarch": "generic",
-      "sha256": "2bf73d19b8d2613dfbc7242d8e92da97ac22e0479a1eac184871e586e3d190f8",
-      "size": 1693338,
+      "sha256": "abd8abfd316188c15c327e11ef1b421e2f8eef5694f8b34ffc57b4899c248701",
+      "size": 1695109,
       "subdir": "noarch",
-      "timestamp": 1688783174987,
-      "version": "0.1.2"
+      "timestamp": 1706982286688,
+      "version": "0.1.3"
     },
     "stitch-rules_python-0.1.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
@@ -259,26 +257,27 @@
       "timestamp": 1688782569956,
       "version": "0.1.6"
     },
-    "stitch-toolchain_conda_gxx-0.1.5-hb0f4dca_0.tar.bz2": {
+    "stitch-toolchain_conda_gxx-0.1.9-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
-        "bazel",
+        "bazel >=6",
         "gxx =12.1.0",
         "patchelf",
         "stitch-bazel_skylib >=0.1.1",
-        "stitch-workspace >=0.1.1"
+        "stitch-workspace >=0.1.3",
+        "sysroot_linux-64 >=2.28"
       ],
       "license": "BSD-3-Clause",
       "license_family": "BSD",
-      "md5": "620e2434f1118827155d3b83e04f913d",
+      "md5": "3e3499e00170652a1294b482c812d2aa",
       "name": "stitch-toolchain_conda_gxx",
       "noarch": "generic",
-      "sha256": "54c31b62494a64570899c261b64180164e880140c3aa445ea0e23d74b62cb7e2",
-      "size": 36999,
+      "sha256": "adb0c61cecacbbf034a7a70ebcde243809abef0457da560b568ed7bc0a37ee9d",
+      "size": 39944,
       "subdir": "noarch",
-      "timestamp": 1688782411166,
-      "version": "0.1.5"
+      "timestamp": 1707491562713,
+      "version": "0.1.9"
     },
     "stitch-toolchain_conda_python-0.1.0-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
@@ -298,7 +297,7 @@
       "timestamp": 1678675996124,
       "version": "0.1.0"
     },
-    "stitch-toolchain_conda_rust-0.1.2-hb0f4dca_0.tar.bz2": {
+    "stitch-toolchain_conda_rust-0.1.3-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
       "build_number": 0,
       "depends": [
@@ -306,19 +305,19 @@
         "rust =1.67.1",
         "stitch-bazel_skylib >=0.1.0",
         "stitch-rules_rust >=0.1.0",
-        "stitch-toolchain_conda_gxx >=0.1.5",
+        "stitch-toolchain_conda_gxx >=0.1.6",
         "stitch-workspace >=0.1.2"
       ],
       "license": "BSD-3-Clause",
       "license_family": "BSD",
-      "md5": "4ba2f9f9cab6237271ff11d315019044",
+      "md5": "8dcb3910c3247df866761f3196fc5739",
       "name": "stitch-toolchain_conda_rust",
       "noarch": "generic",
-      "sha256": "49632f7780fba7c5e234a38f69603f5349320982ec89e2c4cb2b1c1775e94690",
-      "size": 16977,
+      "sha256": "ba647717b06f95a0d07884f60b8e187df9172575b094630dd257563d0fa0b713",
+      "size": 17415,
       "subdir": "noarch",
-      "timestamp": 1688782847174,
-      "version": "0.1.2"
+      "timestamp": 1688796146769,
+      "version": "0.1.3"
     },
     "stitch-workspace-0.1.3-hb0f4dca_0.tar.bz2": {
       "build": "hb0f4dca_0",
