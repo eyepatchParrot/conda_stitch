@@ -1,3 +1,4 @@
-# common --registry="file://%workspace%/override/registry"
+# common --registry="file://%workspace%/bazel-override/registry"
 common --registry="https://raw.githubusercontent.com/eyepatchParrot/conda_stitch/refs/heads/registry"
-common --override_module=cc_ex=%workspace%/override/cc_ex
+common --symlink_prefix=bazelignore/
+common --override_module=cc_ex=%workspace%/bazelignore/override/cc_ex
