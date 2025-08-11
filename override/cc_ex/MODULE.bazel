@@ -1,0 +1,4 @@
+module(name = "cc_ex", version = "99.0")
+
+bazel_dep(name = "zlib", version = "1.3.1.bcr.6")
+bazel_dep(name = "googletest", version = "1.17.0")

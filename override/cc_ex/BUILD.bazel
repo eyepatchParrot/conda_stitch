@@ -1,0 +1,11 @@
+cc_binary(
+    name = "main",
+    srcs = ["main.c"],
+    deps = ["@zlib"],
+)
+
+cc_test(
+    name = "gtest",
+    srcs = ["gtest.cc"],
+    deps = ["@zlib", "@googletest//:gtest"],
+)

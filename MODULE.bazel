@@ -1,0 +1,2 @@
+# Override module needs a name to exist
+bazel_dep(name = "cc_ex")

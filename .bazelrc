@@ -1,0 +1,2 @@
+# common --registry="file://%workspace%/registry"
+common --override_module=cc_ex=%workspace%/override/cc_ex
