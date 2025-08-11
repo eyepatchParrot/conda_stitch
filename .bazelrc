@@ -1,2 +1,3 @@
-# common --registry="file://%workspace%/registry"
+# common --registry="file://%workspace%/override/registry"
+common --registry="https://raw.githubusercontent.com/eyepatchParrot/conda_stitch/refs/heads/registry"
 common --override_module=cc_ex=%workspace%/override/cc_ex
