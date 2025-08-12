@@ -1,0 +1,35 @@
+context:
+  stitch: "$PREFIX/share/stitch"
+package:
+  name: kakoune
+  version: "2025.06.03"
+
+source:
+  git: ..
+
+build:
+  number: 0
+  script:
+    - env ; set -x
+    - git remote -vv; git log -n 1
+    - bazel build -c opt //src:main ; cp bazel-bin/src/main src/kak
+    - make PREFIX="$PREFIX"
+    - make install
+
+requirements:
+  build:
+    - git
+    - bazel
+
+tests:
+  - package_contents:
+      # checks for the existence of files inside $PREFIX or %PREFIX%
+      # or, checks that there is at least one file matching the specified `glob`
+      # pattern inside the prefix
+      # files:
+      #   - etc/libmamba/test.txt
+      #   - etc/libmamba
+      #   - etc/libmamba/*.mamba.txt
+
+      bin:
+        - kak
