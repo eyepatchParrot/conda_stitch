@@ -5,16 +5,16 @@ package:
   version: "2025.06.03"
 
 source:
-  git: ..
+  - git: ..
+    depth: 1
 
 build:
   number: 0
   script:
     - env ; set -x
     - git remote -vv; git log -n 1
-    - bazel build -c opt //src:main ; cp bazel-bin/src/main src/kak
-    - make PREFIX="$PREFIX"
-    - make install
+    - bazel build -c opt //src:main --config=remote-minimal ; cp bazel-bin/src/main src/kak
+    - make install PREFIX="$PREFIX"
 
 requirements:
   build:

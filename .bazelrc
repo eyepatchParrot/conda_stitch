@@ -1,4 +1,4 @@
-# common --repo_env=CC=clang++
+common --registry=https://bcr.bazel.build
+common --registry=https://raw.githubusercontent.com/eyepatchParrot/conda_stitch/refs/heads/registry
 common --cxxopt=-std=c++2b
 aquery --cxxopt=-std=c++2b
-# common --spawn_strategy=local

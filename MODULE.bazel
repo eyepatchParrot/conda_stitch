@@ -4,3 +4,18 @@ bazel_dep(name = "gazelle", version = "0.45.0")
 bazel_dep(name = "gazelle_cc", version = "0.1.0")
 
 bazel_dep(name = "rules_cc", version = "0.2.0")
+
+# The module provides an extension named "buildbuddy".
+bazel_dep(name = "toolchains_buildbuddy", version = "0.0.1.250422")
+# The extension creates a repository named "@buildbuddy_toolchain".
+buildbuddy = use_extension("@toolchains_buildbuddy//:extensions.bzl", "buildbuddy")
+buildbuddy.platform(buildbuddy_container_image = "UBUNTU24_04_IMAGE")
+
+buildbuddy.gcc_toolchain(
+    gcc_major_version = "13",
+    # extra_cxx_builtin_include_directories = ["/some/include/dir"],
+)
+
+#   - Using a BuildBuddy's prebuilt image:
+#   - OR bring your own container image:
+#     buildbuddy.platform(container_image = "docker://my-container.image/replace/me@sha256:1234567890abcdef")
