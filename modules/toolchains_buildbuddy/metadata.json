@@ -1,0 +1,16 @@
+{
+    "homepage": "https://github.com/buildbuddy-io/buildbuddy-toolchain",
+    "maintainers": [
+        {
+            "email": "support@buildbuddy.io",
+            "name": "BuildBuddy"
+        }
+    ],
+    "repository": [
+        "github:buildbuddy-io/buildbuddy-toolchain"
+    ],
+    "versions": [
+        "0.0.1.250422"
+    ],
+    "yanked_versions": {}
+}

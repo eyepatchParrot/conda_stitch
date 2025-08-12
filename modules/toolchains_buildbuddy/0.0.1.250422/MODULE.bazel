@@ -1,0 +1,15 @@
+module(
+    name = "toolchains_buildbuddy",
+    version = "0.0.1.250422",
+    repo_name = "io_buildbuddy_buildbuddy_toolchain",
+)
+
+bazel_dep(name = "rules_cc", version = "0.0.17")
+bazel_dep(name = "platforms", version = "0.0.10")
+
+buildbuddy = use_extension("//:extensions.bzl", "buildbuddy")
+use_repo(buildbuddy, "buildbuddy_toolchain")
+
+register_toolchains(
+    "//toolchains/cc:all",
+)
