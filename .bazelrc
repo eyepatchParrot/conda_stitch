@@ -1,0 +1,3 @@
+common --repo_env=CC=clang++
+common --cxxopt=-std=c++23
+aquery --cxxopt=-std=c++23

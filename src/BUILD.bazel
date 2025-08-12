@@ -1,0 +1,267 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
+
+cc_library(
+    name = "alias_registry",
+    srcs = [
+        "alias_registry.cc",
+        "assert.cc",
+        "backtrace.cc",
+        "buffer.cc",
+        "buffer_manager.cc",
+        "buffer_utils.cc",
+        "changes.cc",
+        "client.cc",
+        "client_manager.cc",
+        "color.cc",
+        "command_manager.cc",
+        "completion.cc",
+        "context.cc",
+        "debug.cc",
+        "display_buffer.cc",
+        "env_vars.cc",
+        "event_manager.cc",
+        "exception.cc",
+        "face_registry.cc",
+        "file.cc",
+        "format.cc",
+        "hash.cc",
+        "hash_map.cc",
+        "highlighter.cc",
+        "highlighter_group.cc",
+        "hook_manager.cc",
+        "input_handler.cc",
+        "insert_completer.cc",
+        "keymap_manager.cc",
+        "keys.cc",
+        "line_modification.cc",
+        "memory.cc",
+        "normal.cc",
+        "option_manager.cc",
+        "option_types.cc",
+        "parameters_parser.cc",
+        "ranges.cc",
+        "ranked_match.cc",
+        "regex.cc",
+        "regex_impl.cc",
+        "register_manager.cc",
+        "remote.cc",
+        "scope.cc",
+        "selection.cc",
+        "selectors.cc",
+        "shared_string.cc",
+        "shell_manager.cc",
+        "string.cc",
+        "string_utils.cc",
+        "unit_tests.cc",
+        "window.cc",
+        "word_db.cc",
+    ],
+    hdrs = [
+        "alias_registry.hh",
+        "assert.hh",
+        "backtrace.hh",
+        "buffer.hh",
+        "buffer.inl.hh",
+        "buffer_manager.hh",
+        "buffer_utils.hh",
+        "changes.hh",
+        "client.hh",
+        "client_manager.hh",
+        "color.hh",
+        "command_manager.hh",
+        "completion.hh",
+        "context.hh",
+        "coord.hh",
+        "debug.hh",
+        "diff.hh",
+        "display_buffer.hh",
+        "enum.hh",
+        "env_vars.hh",
+        "event_manager.hh",
+        "exception.hh",
+        "face.hh",
+        "face_registry.hh",
+        "file.hh",
+        "format.hh",
+        "hash.hh",
+        "hash_map.hh",
+        "highlighter.hh",
+        "highlighter_group.hh",
+        "hook_manager.hh",
+        "input_handler.hh",
+        "insert_completer.hh",
+        "keymap_manager.hh",
+        "keys.hh",
+        "line_modification.hh",
+        "memory.hh",
+        "normal.hh",
+        "option.hh",
+        "option_manager.hh",
+        "option_types.hh",
+        "optional.hh",
+        "parameters_parser.hh",
+        "profile.hh",
+        "ranges.hh",
+        "ranked_match.hh",
+        "regex.hh",
+        "regex_impl.hh",
+        "register_manager.hh",
+        "remote.hh",
+        "safe_ptr.hh",
+        "scope.hh",
+        "selection.hh",
+        "selectors.hh",
+        "shared_string.hh",
+        "shell_manager.hh",
+        "string.hh",
+        "string_utils.hh",
+        "unicode.hh",
+        "unit_tests.hh",
+        "units.hh",
+        "user_interface.hh",
+        "utf8.hh",
+        "utf8_iterator.hh",
+        "utils.hh",
+        "value.hh",
+        "vector.hh",
+        "window.hh",
+        "word_db.hh",
+        "word_splitter.hh",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":array",
+        ":array_view",
+        ":clock",
+        ":flags",
+        ":meta",
+        ":range",
+        ":ref_ptr",
+        ":unique_descriptor",
+    ],
+)
+
+cc_library(
+    name = "array",
+    hdrs = ["array.hh"],
+    visibility = ["//visibility:public"],
+    deps = [":array_view"],
+)
+
+cc_library(
+    name = "array_view",
+    hdrs = ["array_view.hh"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "clock",
+    hdrs = ["clock.hh"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "commands",
+    srcs = ["commands.cc"],
+    hdrs = ["commands.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":alias_registry",
+        ":highlighters",
+        ":version",
+    ],
+)
+
+cc_library(
+    name = "flags",
+    hdrs = ["flags.hh"],
+    visibility = ["//visibility:public"],
+    deps = [":meta"],
+)
+
+cc_library(
+    name = "highlighters",
+    srcs = ["highlighters.cc"],
+    hdrs = ["highlighters.hh"],
+    visibility = ["//visibility:public"],
+    deps = [":alias_registry"],
+)
+
+cc_library(
+    name = "json",
+    srcs = ["json.cc"],
+    hdrs = ["json.hh"],
+    visibility = ["//visibility:public"],
+    deps = [":alias_registry"],
+)
+
+cc_library(
+    name = "json_ui",
+    srcs = ["json_ui.cc"],
+    hdrs = ["json_ui.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":alias_registry",
+        ":json",
+    ],
+)
+
+cc_library(
+    name = "meta",
+    hdrs = ["meta.hh"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "range",
+    hdrs = ["range.hh"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "ref_ptr",
+    hdrs = ["ref_ptr.hh"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "terminal_ui",
+    srcs = ["terminal_ui.cc"],
+    hdrs = ["terminal_ui.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":alias_registry",
+        ":array_view",
+    ],
+)
+
+cc_library(
+    name = "unique_descriptor",
+    hdrs = ["unique_descriptor.hh"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "main",
+    srcs = ["main.cc"],
+    deps = [
+        ":alias_registry",
+        ":commands",
+        ":highlighters",
+        ":json_ui",
+        ":terminal_ui",
+        ":version",
+    ],
+)
+
+genrule(
+    name = "version_gen",
+    outs = ["version.cc"],
+    cmd = """version=$$(cat .version 2>/dev/null || git describe --tags HEAD 2>/dev/null | sed s/^v// || echo unknown); printf 'namespace Kakoune { const char *version = "%s"; }\n' "$${version}" > $@""",
+)
+
+cc_library(
+    name = "version",
+    srcs = [":version_gen"],
+    visibility = ["//visibility:public"],
+)

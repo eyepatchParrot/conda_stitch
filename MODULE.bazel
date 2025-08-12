@@ -1,0 +1,6 @@
+module(name = "kakoune")
+
+bazel_dep(name = "gazelle", version = "0.45.0")
+bazel_dep(name = "gazelle_cc", version = "0.1.0")
+
+bazel_dep(name = "rules_cc", version = "0.2.0")
