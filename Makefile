@@ -106,8 +106,7 @@ objects = $(sources:.cc=$(tag).o)
 
 all: src/kak
 
-src/kak: src/kak$(tag)
-	ln -sf kak$(tag) $@
+src/kak:
 
 src/kak$(tag): src/.version.o $(objects)
 	$(CXX) $(KAK_LDFLAGS) $(KAK_CXXFLAGS) $(objects) src/.version.o $(KAK_LIBS) -o $@
