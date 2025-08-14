@@ -1,0 +1,15 @@
+module(name = "TODO")
+
+bazel_dep(name = "gazelle", version = "0.45.0")
+bazel_dep(name = "gazelle_cc", version = "0.1.0")
+
+bazel_dep(name = "rules_cc", version = "0.2.0")
+
+bazel_dep(name = "toolchains_buildbuddy", version = "0.0.1.250422")
+buildbuddy = use_extension("@toolchains_buildbuddy//:extensions.bzl", "buildbuddy")
+buildbuddy.platform(buildbuddy_container_image = "UBUNTU24_04_IMAGE")
+
+buildbuddy.gcc_toolchain(
+    gcc_major_version = "13",
+    # extra_cxx_builtin_include_directories = ["/some/include/dir"],
+)
