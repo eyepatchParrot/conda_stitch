@@ -1,0 +1,13 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
+
+cc_library(
+    name = "elf",
+    hdrs = ["elf.h"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "patchelf",
+    srcs = ["patchelf.cc", "patchelf.h"],
+    deps = [":elf"],
+)

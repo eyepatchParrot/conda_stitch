@@ -1,0 +1,56 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
+
+cc_library(
+    name = "bar",
+    srcs = ["bar.c"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "contiguous-note-sections",
+    srcs = ["contiguous-note-sections.s"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "foo",
+    srcs = ["foo.c"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "shared-rpath",
+    srcs = ["shared-rpath.c"],
+    visibility = ["//visibility:public"],
+)
+
+cc_library(
+    name = "too-many-strtab2",
+    srcs = ["too-many-strtab2.s"],
+    visibility = ["//visibility:public"],
+)
+
+cc_binary(
+    name = "main",
+    srcs = ["main.c"],
+)
+
+cc_binary(
+    name = "no-rpath",
+    srcs = ["no-rpath.c"],
+)
+
+cc_binary(
+    name = "simple",
+    srcs = ["simple.c"],
+)
+
+cc_binary(
+    name = "too-many-strtab",
+    srcs = ["too-many-strtab.c"],
+)
+
+cc_binary(
+    name = "void",
+    srcs = ["void.c"],
+)

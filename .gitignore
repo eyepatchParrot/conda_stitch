@@ -40,3 +40,4 @@ CMakeLists.txt.user
 .vscode/
 .idea/
 result
+/bazel-*
