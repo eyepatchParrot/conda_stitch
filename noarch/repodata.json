@@ -1139,7 +1139,25 @@
       "version": "0.0.9"
     }
   },
-  "packages.conda": {},
-  "removed": [],
-  "repodata_version": 1
+  "packages.conda": {
+    "tangletycoon-1.0.0-pyh4616a5c_0.conda": {
+      "build": "pyh4616a5c_0",
+      "build_number": 0,
+      "depends": [
+        "python",
+        "fire",
+        "python"
+      ],
+      "license": "MIT",
+      "md5": "a4c477c71f6105a0531e59f00e422750",
+      "name": "tangletycoon",
+      "noarch": "python",
+      "sha256": "9a3052e9505fd7db2c4d11b8c6af6edd9bd1b508fc2e2563995df49f053dfd45",
+      "size": 6934,
+      "subdir": "noarch",
+      "timestamp": 1763735859419,
+      "version": "1.0.0"
+    }
+  },
+  "repodata_version": 2
 }
